@@ -1,7 +1,10 @@
-import React from "react"
+import React from "react";
+import Layout from "../components/layout";
 
-export default function Home() {
-    return (
-      <div>Astronomy club IIT BHU</div>
-    )
-}
+export default () => (
+  <Layout>
+    <h1>Home</h1>
+    <h1>Home</h1>
+    <h1>Home</h1>
+  </Layout>
+);
