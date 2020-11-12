@@ -10,28 +10,29 @@ const Grid = styled.div`
   align-items: baseline;
   width: 100%;
 `;
-const Card = styled.div`
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-around;
-  background: #171321;
-  max-width: 30%;
-  max-height: 600px;
-  min-width: 30%;
-  margin-top: 100px;
-  border-radius: 15px;
-  border: 1px solid #0d314a;
-  @media (max-width: 720px){
-    max-width: 95%;
-    width: 100%;
-  }
-  a, h2, p {
-    padding: 30px;
-    text-decoration: none;
-  }
-`;
 
 const Social = (props) => {
+  let Card = styled.div`
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    background: #171321;
+    max-width: ${(1 / props.platform.length) * 100 - 2}%;
+    max-height: 600px;
+    min-width: ${(1 / props.platform.length) * 100 - 2}%;
+    margin-top: 100px;
+    border-radius: 15px;
+    border: 1px solid #0d314a;
+    @media (max-width: 720px){
+      max-width: 95%;
+      width: 100%;
+    }
+    a, h2, p {
+      padding: 30px;
+      text-decoration: none;
+    }
+  `;
+
   return (
     <Grid>
       {props.platform.map(platform => (

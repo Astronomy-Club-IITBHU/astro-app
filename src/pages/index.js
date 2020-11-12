@@ -16,13 +16,6 @@ const platforms = [
     desc: "We post on FB too!",
     link: "https://www.facebook.com/astro.iitbhu/",
     linkText: "Visit the page"
-  },
-  {
-    name: "Twitter",
-    imgLink: "https://www.flaticon.com/svg/static/icons/svg/733/733579.svg",
-    desc: "Listen to our tweet",
-    link: "https://twitter.com/",
-    linkText: "Take me there"
   }
 ]
 
@@ -31,6 +24,6 @@ export default () => (
     <h1>Home</h1>
     <Social
       platform={platforms}
-      />
+    />
   </Layout>
 );
