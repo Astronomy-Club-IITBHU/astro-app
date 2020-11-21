@@ -17,7 +17,7 @@ const Header = () => {
         </Link>
 
         <button
-          className="items-center block px-3 py-2 text-white border border-white rounded md:hidden"
+          className="items-center block px-3 py-2 text-gray-900 border border-gray rounded md:hidden"
           onClick={() => toggleExpansion(!isExpanded)}
         >
           <svg
