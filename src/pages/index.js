@@ -1,6 +1,8 @@
 import React from "react";
 import Layout from "../components/layout";
-import Social from "../components/social";
+// import Social from "../components/social";
+import RecentPost from "../hooks/use-recent-post";
+import PostPreview from "../components/post-preview";
 
 const platforms = [
   {
@@ -19,9 +21,18 @@ const platforms = [
   },
 ];
 
-export default () => (
-  <Layout>
-    <h1>Home</h1>
-    <Social platform={platforms} />
-  </Layout>
-);
+export default () => {
+  const recentPost = RecentPost();
+
+  return (
+    <Layout>
+      <div>
+        <h2>Recent Posts</h2>
+        {recentPost.map(post => (
+          <PostPreview key={post.slug} post={post} />
+        ))}
+      </div>
+      {/* <Social platform={platforms} /> */}
+    </Layout>
+  );
+};
