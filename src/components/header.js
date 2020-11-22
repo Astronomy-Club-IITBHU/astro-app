@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 import siteMetadata from "../hooks/use-siteMetadata";
-import AstroSVG from "../images/astro";
+import AstroSVG from "../../images/astro";
 
 const Header = () => {
   const { title } = siteMetadata();
   const [isExpanded, toggleExpansion] = useState(false);
   return (
-    <header className="bg-white">
+    <header className="bg-white border-b-2	">
       <div className="flex flex-wrap items-center justify-between max-w-7xl p-4 mx-auto md:p-4">
         <Link to="/">
           <h1 className="flex items-center text-gray-900 no-underline">

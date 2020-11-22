@@ -11,6 +11,8 @@ module.exports = {
 
   plugins: [
     "gatsby-plugin-react-helmet",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -20,7 +22,7 @@ module.exports = {
         background_color: fullConfig.theme.colors.coolGray,
         theme_color: fullConfig.theme.colors.coolGray,
         display: "minimal-ui",
-        icon: "src/images/astro.png",
+        icon: "images/astro.png",
       },
     },
     {
@@ -36,6 +38,13 @@ module.exports = {
       options: {
         name: "posts",
         path: "posts",
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: "images",
       },
     },
     {
