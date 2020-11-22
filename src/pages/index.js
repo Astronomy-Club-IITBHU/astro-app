@@ -3,6 +3,8 @@ import Layout from "../components/layout";
 // import Social from "../components/social";
 import RecentPost from "../hooks/use-recent-post";
 import PostPreview from "../components/post-preview";
+import BackgroundImage from "gatsby-background-image";
+import { useStaticQuery, graphql } from "gatsby";
 
 const platforms = [
   {
@@ -46,51 +48,12 @@ const Front = () => {
           a student’s thirst for astronomy by organizing various exciting events
           including{" "}
           <span className="font-semibold">
-            Observational Sessions,Corona magazine, Astro-quiz, Telescone
+            Observational Sessions,Corona magazine, Astro-quiz, Telescon
           </span>
           , and many more.We do conduct Online and offline workshops as well for
           students to introduce them to basics of Astronomy.
         </p>
       </div>
-
-      {/* <div className="container mx-auto flex px-5 py-15 md:flex-row flex-col items-center">
-        <div className="lg:flex-grow md:w-1/2 lg:pr-10 md:pr-16 flex flex-col md:items-start md:text-left  md:mb-0 items-center text-center">
-        <h1 className="title-font sm:text-4xl text-3xl mb-1 font-medium text-gray-900">
-          Since its foundation
-          <br className="hidden lg:inline-block" /> in{" "}
-          <span className="font-mono font-semibold ">2012</span>
-        </h1>
-        <p className="mb-8 leading-relaxed">
-          the Astronomy club aims to build on this fascination and brings
-          innovation and passion to its vision of spreading the awareness and
-          knowledge of astronomy and space sciences to the students. This forum
-          is built to spread the facts and news about all the events taking part
-          in the realm of Astronomy and the events being conducted within the
-          club in and out the campus.
-          <br className="hidden lg:inline-block" />
-          <br className="hidden lg:inline-block" />
-          If you have ever been curious to know the secrets preserved in this
-          Universe's lap, if watching the night sky provides you the indigenous
-          curiosity, then you're at the right place. The Astronomy club IIT
-          BHU,an ambitious team driven by amateur astronomers, strives to quench
-          a student’s thirst for astronomy by organizing various exciting events
-          including{" "}
-          <span className="font-semibold">
-            Observational Sessions,Corona magazine, Astro-quiz, Telescone
-          </span>
-          , and many more.We do conduct Online and offline workshops as well for
-          students to introduce them to basics of Astronomy. Since its
-          foundation in 2012,
-        </p>
-      </div>
-      <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-        <img
-          class="object-cover object-center rounded"
-          alt="hero"
-          src="https://dummyimage.com/720x600"
-        />
-      </div>
-      </div> */}
     </section>
   );
 };

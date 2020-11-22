@@ -37,6 +37,10 @@ const Header = () => {
         >
           {[
             {
+              route: `/`,
+              title: `Home`,
+            },
+            {
               route: `/blogs`,
               title: `Blogs`,
             },
