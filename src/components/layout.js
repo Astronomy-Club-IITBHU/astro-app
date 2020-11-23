@@ -33,7 +33,11 @@ const Layout = ({ children }) => {
             </p>
             <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
               {/* ----------------------   For facebook  -------------------- */}
-              <a className="text-gray-500">
+              <a
+                className="text-gray-500"
+                href="https://www.facebook.com/astro.iitbhu/"
+                target="_blank"
+              >
                 <svg
                   fill="currentColor"
                   strokeLinecap="round"
@@ -46,7 +50,11 @@ const Layout = ({ children }) => {
                 </svg>
               </a>
               {/* -----------------  For instagram  ---------------*/}
-              <a className="ml-3 text-gray-500  ">
+              <a
+                className="ml-3 text-gray-500"
+                href="https://www.instagram.com/astro.iitbhu/"
+                target="_blank"
+              >
                 <svg
                   fill="none"
                   stroke="currentColor"
