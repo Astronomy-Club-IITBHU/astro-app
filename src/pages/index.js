@@ -3,8 +3,6 @@ import Layout from "../components/layout";
 // import Social from "../components/social";
 import RecentPost from "../hooks/use-recent-post";
 import PostPreview from "../components/post-preview";
-import BackgroundImage from "gatsby-background-image";
-import { useStaticQuery, graphql } from "gatsby";
 
 const platforms = [
   {
@@ -60,16 +58,16 @@ const Front = () => {
 
 export default () => {
   const recentPost = RecentPost();
-
+  console.log(recentPost);
   return (
     <Layout>
       <Front />
-      {/* <div> */}
-      {/* <h2>Recent Posts</h2>
+      <div>
+        <h1 className="max-w-2xl text-4xl mx-auto px-8 py-4 ">Recent Posts</h1>
         {recentPost.map(post => (
           <PostPreview key={post.slug} post={post} />
         ))}
-      </div> */}
+      </div>
 
       {/* <Social platform={platforms} /> */}
     </Layout>

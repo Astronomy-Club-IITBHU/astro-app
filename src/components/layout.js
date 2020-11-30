@@ -3,7 +3,7 @@ import Header from "./header";
 import Helmet from "react-helmet";
 import useSiteMetadata from "../hooks/use-siteMetadata";
 import AstroSVG from "../../images/astro";
-import BackgroundImage from "gatsby-background-image";
+// import BackgroundImage from "gatsby-background-image";
 
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -37,6 +37,7 @@ const Layout = ({ children }) => {
                 className="text-gray-500"
                 href="https://www.facebook.com/astro.iitbhu/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <svg
                   fill="currentColor"
@@ -54,6 +55,7 @@ const Layout = ({ children }) => {
                 className="ml-3 text-gray-500"
                 href="https://www.instagram.com/astro.iitbhu/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <svg
                   fill="none"
