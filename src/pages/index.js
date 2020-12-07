@@ -24,7 +24,7 @@ const platforms = [
 const Front = () => {
   return (
     <section className="text-gray-700 body-font">
-      <div className="container mx-auto flex px-5 py-15  flex-col  md:items-start md:text-left items-center">
+      <div className="container mx-auto px-5 py-15 flex flex-col  md:items-start md:text-left items-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-1 font-medium text-gray-900 ">
           Since its foundation
           <br className="hidden lg:inline-block" /> in{" "}
