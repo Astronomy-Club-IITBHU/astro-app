@@ -3,13 +3,19 @@ import { Link } from "gatsby";
 import Posts from "../hooks/all-blog";
 
 const Card = ({ post }) => {
+  { post.category = post.category.split(',') }
   return (
     <div class="p-5 md:w-1/2 flex flex-col items-start">
-      <span class="inline-block py-1 px-3 rounded bg-indigo-100 text-indigo-500 text-sm font-medium tracking-widest">
-        {post.category}
-      </span>
-
-      <h2 class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">
+      <div className="categories">
+        {post.category.map((category) => {
+          return (
+            <span class="inline-block py-1 px-3 mr-1 rounded bg-indigo-100 text-indigo-500 text-sm font-medium tracking-widest">
+              {category}
+            </span>
+          )
+        })}
+      </div>
+      <h2 class="sm:text-3xl text-2xl title-font font-medium text-gray-200 mt-4 mb-4">
         {post.title}
       </h2>
       <p class="leading-relaxed mb-8">{post.excerpt}</p>
@@ -29,7 +35,7 @@ const Card = ({ post }) => {
             <path d="M12 5l7 7-7 7"></path>
           </svg>
         </a>
-        <span class="text-gray-600 inline-flex items-center ml-auto leading-none text-sm">
+        <span class="text-gray-200 inline-flex items-center ml-auto leading-none text-sm">
           {post.date}
         </span>
       </div>
@@ -40,7 +46,7 @@ const Card = ({ post }) => {
 const TopCard = () => {
   const data = Posts();
   return (
-    <section class="text-gray-700 body-font overflow-hidden">
+    <section class="text-gray-400 body-font overflow-hidden">
       <div class="flex flex-wrap -m-5 ">
         {data.map(post => (
           <Card key={post.slug} post={post} />
