@@ -2,7 +2,6 @@ import React from "react";
 import Layout from "../components/layout";
 import RecentPost from "../hooks/use-recent-post";
 import PostPreview from "../components/post-preview";
-import "../css/stars.css";
 
 // const platforms = [
 //   {
@@ -24,9 +23,6 @@ import "../css/stars.css";
 const Front = () => {
   return (
     <>
-      <div class="stars large"></div>
-      <div class="stars medium"></div>
-      <div class="stars small"></div>
     <section className="text-gray-300 body-font">
       <div className="container mx-auto px-5 py-15 flex flex-col  md:items-start md:text-left items-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-1 font-medium text-gray-200 ">

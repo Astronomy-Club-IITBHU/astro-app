@@ -3,6 +3,7 @@ import Header from "./header";
 import Helmet from "react-helmet";
 import useSiteMetadata from "../hooks/use-siteMetadata";
 import AstroSVG from "../../images/astro";
+import "../css/stars.css";
 // import BackgroundImage from "gatsby-background-image";
 
 const Layout = ({ children }) => {
@@ -14,7 +15,9 @@ const Layout = ({ children }) => {
         <title>{title}</title>
         <meta name="description" content={description} />
       </Helmet>
-
+      <div class="stars large"></div>
+      <div class="stars medium"></div>
+      <div class="stars small"></div>
       <div className="flex flex-col min-h-screen font-sans text-gray-500">
         <Header />
 
@@ -25,7 +28,7 @@ const Layout = ({ children }) => {
         <footer className="text-gray-500 body-font border-t-2">
           <div className="container px-5 py-8 mx-auto max-w-3xl flex items-center sm:flex-row flex-col">
             <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-500">
-              <AstroSVG color="white"/>
+              <AstroSVG color="white" />
               {/* <span className="ml-3 text-xl">Astronomy Club</span> */}
             </a>
             <p className="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
