@@ -3,6 +3,7 @@ import Header from "./header";
 import Helmet from "react-helmet";
 import useSiteMetadata from "../hooks/use-siteMetadata";
 import AstroSVG from "../../images/astro";
+import "../css/stars.css";
 // import BackgroundImage from "gatsby-background-image";
 
 const Layout = ({ children }) => {
@@ -14,27 +15,29 @@ const Layout = ({ children }) => {
         <title>{title}</title>
         <meta name="description" content={description} />
       </Helmet>
-
-      <div className="flex flex-col min-h-screen font-sans text-gray-900">
+      <div class="stars large"></div>
+      <div class="stars medium"></div>
+      <div class="stars small"></div>
+      <div className="flex flex-col min-h-screen font-sans text-gray-500">
         <Header />
 
         <main className="flex-1 w-full max-w-8xl px-4 py-8 mx-auto md:px-8 md:py-16">
           {children}
         </main>
 
-        <footer className="text-gray-700 body-font border-t-2">
+        <footer className="text-gray-500 body-font border-t-2">
           <div className="container px-5 py-8 mx-auto max-w-3xl flex items-center sm:flex-row flex-col">
-            <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-              <AstroSVG />
-              <span className="ml-3 text-xl">Astronomy Club</span>
+            <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-500">
+              <AstroSVG color="white" />
+              {/* <span className="ml-3 text-xl">Astronomy Club</span> */}
             </a>
-            <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
-              © 2020 iitbhu
+            <p className="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+              © 2020 IITBHU
             </p>
             <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
               {/* ----------------------   For facebook  -------------------- */}
               <a
-                className="text-gray-500"
+                className="text-gray-200"
                 href="https://www.facebook.com/astro.iitbhu/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -52,7 +55,7 @@ const Layout = ({ children }) => {
               </a>
               {/* -----------------  For instagram  ---------------*/}
               <a
-                className="ml-3 text-gray-500"
+                className="ml-3 text-gray-200"
                 href="https://www.instagram.com/astro.iitbhu/"
                 target="_blank"
                 rel="noopener noreferrer"
