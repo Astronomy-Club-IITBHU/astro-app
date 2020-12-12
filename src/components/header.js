@@ -7,7 +7,7 @@ const Header = () => {
   const { title } = siteMetadata();
   const [isExpanded, toggleExpansion] = useState(false);
   return (
-    <header className="bg-gray-200 border-b-2	">
+    <header className="bg-gray-200 border-b-2" style={{marginTop: "-3.5px"}}>
       <div className="flex flex-wrap items-center justify-between max-w-7xl p-4 mx-auto md:p-4">
         <Link to="/">
           <h1 className="flex items-center text-gray-900 no-underline">
