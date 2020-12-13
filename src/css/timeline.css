@@ -206,7 +206,7 @@
     border-radius: 0 88px 88px 0;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 800px) {
   .main-timeline .timeline {
     margin-top: -19px;
   }
