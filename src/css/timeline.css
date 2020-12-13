@@ -36,7 +36,7 @@
   content: "";
   height: 100%;
   width: 50%;
-  border-radius: 110px 0 0 110px;
+  border-radius: 130px 0 0 130px;
   border: 15px solid #46b2bc;
   border-right: none;
   position: absolute;
@@ -96,7 +96,7 @@
 .main-timeline .timeline:nth-child(even)::before {
   left: auto;
   right: 0;
-  border-radius: 0 110px 110px 0;
+  border-radius: 0 130px 130px 0;
   border: 15px solid red;
   border-left: none;
 }

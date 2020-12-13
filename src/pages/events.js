@@ -36,7 +36,7 @@ const events = [{
 
 const Event = () => {
   return <Layout>
-    <div class="relative w-1/2 left-1/4">
+    <div class="relative lg:w-1/2 lg:left-1/4">
       <AutoplaySlider
         play={true}
         cancelOnInteraction={false} // should stop playing on user interaction
