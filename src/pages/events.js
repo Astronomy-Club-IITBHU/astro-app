@@ -47,7 +47,7 @@ const Event = () => {
         <div data-src="https://i.pinimg.com/originals/14/f7/6c/14f76c147e30210ed7b46a8cb315056a.png" />
       </AutoplaySlider>
     </div>
-    <div class="container mt-20">
+    <div class="container mt-20 mx-auto">
       <div class="row">
         <div class="col">
           <div class="main-timeline">
