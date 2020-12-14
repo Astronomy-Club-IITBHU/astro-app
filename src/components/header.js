@@ -2,17 +2,18 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import siteMetadata from "../hooks/use-siteMetadata";
 import AstroSVG from "../../images/astro";
+import "../css/style.css";
 
 const Header = () => {
   const { title } = siteMetadata();
   const [isExpanded, toggleExpansion] = useState(false);
   return (
-    <header className="bg-gray-200 border-b-2" style={{marginTop: "-3.5px"}}>
+    <header className="bg-gray-200 border-b-2" style={{ marginTop: "-3.5px" }}>
       <div className="flex flex-wrap items-center justify-between max-w-7xl p-4 mx-auto md:p-4">
         <Link to="/">
           <h1 className="flex items-center text-gray-900 no-underline">
             <AstroSVG />
-            <span className="text-xl font-bold tracking-tight">{title}</span>
+            <span className="text-xl font-bold tracking-tight hidden-small">{title}</span>
           </h1>
         </Link>
 
@@ -31,9 +32,8 @@ const Header = () => {
         </button>
 
         <nav
-          className={`${
-            isExpanded ? `block` : `hidden`
-          } md:block md:items-center w-full md:w-auto`}
+          className={`${isExpanded ? `block` : `hidden`
+            } md:block md:items-center w-full md:w-auto`}
         >
           {[
             {
