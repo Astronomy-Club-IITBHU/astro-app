@@ -5,10 +5,9 @@ import TopCard from "../components/topBlogCard";
 const Blog = () => {
   return (
     <Layout>
-      <TopCard />
-      {/* <div>
-        <h1>This is blogs page</h1>
-      </div> */}
+      <div className="px-4 py-8">
+        <TopCard />
+      </div>
     </Layout>
   );
 };

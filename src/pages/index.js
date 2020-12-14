@@ -62,17 +62,19 @@ export default () => {
   console.log(recentPost);
   return (
     <Layout>
-      <Front />
-      <div>
-        <h1 className="text-gray-300 max-w-2xl text-4xl mx-auto px-8 py-4 ">
-          Recent Posts
-        </h1>
-        {recentPost.slice(0, 3).map(post => (
-          <PostPreview key={post.slug} post={post} />
-        ))}
-      </div>
+      <div className="px-4 py-8">
+        <Front />
+        <div>
+          <h1 className="text-gray-300 max-w-2xl text-4xl mx-auto px-8 py-4 ">
+            Recent Posts
+          </h1>
+          {recentPost.slice(0, 3).map(post => (
+            <PostPreview key={post.slug} post={post} />
+          ))}
+        </div>
 
-      {/* <Social platform={platforms} /> */}
+        {/* <Social platform={platforms} /> */}
+      </div>
     </Layout>
   );
 };
