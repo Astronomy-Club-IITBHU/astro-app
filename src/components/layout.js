@@ -10,13 +10,13 @@ import Star from "./stars";
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
-    <>
+    <div>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
       </Helmet>
-      {/* <Star /> */}
+      <Star />
       <div className="flex flex-col min-h-screen">
         <Header />
 
@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
 
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,11 +1,12 @@
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
     query {
-      allMdx {
+      allMarkdownRemark {
         nodes {
           id
           frontmatter {
             slug
+            image
           }
         }
       }
@@ -16,7 +17,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     reporter.panic("failed to create posts", result.errors);
   }
 
-  const posts = result.data.allMdx.nodes;
+  const posts = result.data.allMarkdownRemark.nodes;
 
   posts.forEach(post => {
     console.log(post.frontmatter.slug);
@@ -25,6 +26,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: require.resolve("./src/templates/blog.js"),
       context: {
         slug: post.frontmatter.slug,
+        image: post.frontmatter.image,
       },
     });
   });
