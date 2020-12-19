@@ -3,6 +3,7 @@ import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
 import '../css/timeline.css';
+import '../css/styles.css';
 import Layout from "../components/layout";
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);

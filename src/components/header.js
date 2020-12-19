@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import siteMetadata from "../hooks/use-siteMetadata";
 import AstroSVG from "../../images/astro";
-import "../css/style.css";
+import "../css/styles.css";
 
 const Header = () => {
   const { title } = siteMetadata();
