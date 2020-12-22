@@ -1,78 +1,149 @@
 import React from "react";
-import AwesomeSlider from 'react-awesome-slider';
-import withAutoplay from 'react-awesome-slider/dist/autoplay';
-import 'react-awesome-slider/dist/styles.css';
-import '../css/timeline.css';
-import '../css/styles.css';
 import Layout from "../components/layout";
+import { graphql } from 'gatsby';
+import Img from "gatsby-image";
+import '../css/events.css';
 
-const AutoplaySlider = withAutoplay(AwesomeSlider);
-
-const events = [{
-  name: "Lorem ipsum",
-  when: "Jan",
-  info: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-  id: 1
-}, {
-  name: "Lorem ipsum",
-  when: "Feb",
-  info: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-  id: 2
-}, {
-  name: "Lorem ipsum",
-  when: "Mar",
-  info: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-  id: 3
-}, {
-  name: "Lorem ipsum",
-  when: "Apr",
-  info: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-  id: 4
-}, {
-  name: "Lorem ipsum",
-  when: "May",
-  info: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-  id: 5
-}];
-
-const Event = () => {
+const Event = ({ data }) => {
+  console.log(data.allFile.edges);
   return (
     <Layout>
-      <div class="relative lg:w-1/2 lg:left-1/4">
-        <AutoplaySlider
-          play={true}
-          cancelOnInteraction={false} // should stop playing on user interaction
-          interval={4000}
-        >
-          <div data-src="https://i.pinimg.com/originals/5a/8c/43/5a8c43597540271f92a37f89b064b8ec.png" />
-          <div data-src="https://i.pinimg.com/originals/e4/12/1e/e4121ef2638b2e36b52c6cbed79da85d.jpg" />
-          <div data-src="https://i.pinimg.com/originals/14/f7/6c/14f76c147e30210ed7b46a8cb315056a.png" />
-        </AutoplaySlider>
-      </div>
-      <div class="container mt-20 mx-auto">
-        <div class="row">
-          <div class="col">
-            <div class="main-timeline">
-              {
-                events.map((event) => {
-                  return (
-                    <div class="timeline">
-                      <div class="timeline-content">
-                        <span class="timeline-year">{event.when}</span>
-                        <div class="content">
-                          <h3 class="title">{event.name}</h3>
-                          <p class="description">{event.info}</p>
-                        </div>
-                      </div>
-                    </div>
-                  )
-                })
-              }
+
+      <div class="container my-12 mx-auto px-4 md:px-12">
+        <div class="flex flex-wrap -mx-1 lg:-mx-4 items-stretch gap-10 md:gap-0">
+
+          <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3" style={{ boxShadow: "0px -20px 40px rgba(33, 150, 243, 0.25)" }}>
+            <div class="w-full">
+              <Img
+                fluid={data.allFile.edges[0].node.childImageSharp.fluid}
+                style={{ height: "100%", width: "100%" }}
+                className="object-cover"
+                alt="Theoretical Sessions"
+              />
+            </div>
+            <div class="px-6 py-4 text-black bg-gray-200">
+              <div class="font-bold text-xl mb-2">Theoretical Sessions</div>
+              <p class="text-base">
+                All great discoveries start as a theory, and astronomy does not differ from this. Rather, all observations have some scientific background to them. We conduct regular sessions wherein club-members, professors and scientists doing
+                ground-breaking research share their knowledge while interacting with students.
+                </p>
             </div>
           </div>
+
+          <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3" style={{ boxShadow: "0px -20px 40px rgba(33, 150, 243, 0.25)" }}>
+            <div class="w-full">
+              <Img
+                fluid={data.allFile.edges[1].node.childImageSharp.fluid}
+                style={{ height: "100%", width: "100%" }}
+                className="object-cover"
+                alt="Theoretical Sessions"
+              />
+            </div>
+            <div class="px-6 py-4 text-black bg-gray-200">
+              <div class="font-bold text-xl mb-2">Observational Sessions</div>
+              <p class="text-base">
+                Every theory, unless proved practically, is just a theory. It is the observations backing those theory that solidify their background.
+                The club owns various equipment: Star-Tracker & Orion Equitorial, Sky-Watcher Dobsonian, Maksutov Cassegrain, Celestron Alt-AZ and a Star-Tracker motor drive.
+              </p>
+            </div>
+          </div>
+
+          <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3" style={{ boxShadow: "0px -20px 40px rgba(33, 150, 243, 0.25)" }}>
+            <div class="w-full">
+              <Img
+                fluid={data.allFile.edges[2].node.childImageSharp.fluid}
+                style={{ height: "100%", width: "100%" }}
+                className="object-cover"
+                alt="Theoretical Sessions"
+              />
+            </div>
+            <div class="px-6 py-4 text-black bg-gray-200">
+              <div class="font-bold text-xl mb-2">Telescon</div>
+              <p class="text-base">
+                Telescope is an essential component in any astronomer's toolbox. Thus it is essential to understand the ins & outs of it, and to promote that, we
+                organize Telescon: Telescope building competition. Don't know how to build one? Need not to worry, as the competition is preceeded by a workshop
+                where we teach everything about it.
+              </p>
+            </div>
+          </div>
+
+          <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3" style={{ boxShadow: "0px 20px 40px rgba(33, 150, 243, 0.25)" }}>
+            <div class="w-full">
+              <Img
+                fluid={data.allFile.edges[3].node.childImageSharp.fluid}
+                style={{ height: "100%", width: "100%" }}
+                className="object-cover"
+                alt="Theoretical Sessions"
+              />
+            </div>
+            <div class="px-6 py-4 text-black bg-gray-200">
+              <div class="font-bold text-xl mb-2">Supernova</div>
+              <p class="text-base">
+                Prepare to get your mind blown, or as astronomers prefer to say "supernova", in the highly engrossing Astro-Quiz. Held during Technex, various teams from
+                colleges all around the country participate in a battle of wits. The contest consists of various rounds from the genre of physics, history, mythology and
+                general astronomy.
+              </p>
+            </div>
+          </div>
+
+          <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3" style={{ boxShadow: "0px 20px 40px rgba(33, 150, 243, 0.25)" }}>
+            <div class="w-full">
+              <Img
+                fluid={data.allFile.edges[4].node.childImageSharp.fluid}
+                style={{ height: "100%", width: "100%" }}
+                className="object-cover"
+                alt="Theoretical Sessions"
+              />
+            </div>
+            <div class="px-6 py-4 text-black bg-gray-200">
+              <div class="font-bold text-xl mb-2">Yuri's Night</div>
+              <p class="text-base">
+                Hosted in the month of April, Yuri's Night (named after Yuri Gagarin) is a commemoration of milestones in space exploration. It is a two-day event: On the first day
+                we have workshops and theoretical lectures, and on the second day, we host an observational session followed by a movie night.
+              </p>
+            </div>
+          </div>
+
+          <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3" style={{ boxShadow: "0px 20px 40px rgba(33, 150, 243, 0.25)" }}>
+            <div class="w-full">
+              <Img
+                fluid={data.allFile.edges[5].node.childImageSharp.fluid}
+                style={{ height: "100%", width: "100%" }}
+                className="object-cover"
+                alt="Theoretical Sessions"
+              />
+            </div>
+            <div class="px-6 py-4 text-black bg-gray-200">
+              <div class="font-bold text-xl mb-2">Exploring The Interstellar (ETI)</div>
+              <p class="text-base">
+                ETI is a telescope handling event where the participants' observational skills and telescope handling skills are tested in 3
+                rounds. The rounds consist of identifying celestial bodies with naked eye / telescope, mythology behind constellation, as well as tests
+                of telescope handling skills.
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
-    </Layout>)
+
+    </Layout >
+  )
 };
+
+export const query = graphql`
+{
+  allFile(filter: { sourceInstanceName: { eq: "events" } }, sort: { fields: [name], order: ASC }) {
+    edges {
+      node {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  }
+}`;
+
 
 export default Event;
