@@ -40,7 +40,7 @@ const Event = ({ data }) => {
             <div class="px-6 py-4 text-black bg-gray-200">
               <div class="font-bold text-xl mb-2">Observational Sessions</div>
               <p class="text-base">
-                observations are what solidify any theory. Therefore, we organize observational sessions to help students get acquianted 
+                Observations are what solidify any theory. Therefore, we organize observational sessions to help students get acquianted 
                 with observational astronomy and navigate the night sky. The club owns various equipment: Star-Tracker & Orion Equitorial, Dobsonian, Cassegrain, Celestron Alt-AZ and a Star-Tracker motor drive.
               </p>
             </div>
