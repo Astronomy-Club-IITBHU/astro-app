@@ -2,7 +2,6 @@ import React from "react";
 import Layout from "../components/layout";
 import { graphql } from 'gatsby';
 import Img from "gatsby-image";
-import '../css/events.css';
 
 const Event = ({ data }) => {
   console.log(data.allFile.edges);
