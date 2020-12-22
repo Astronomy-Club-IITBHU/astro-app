@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 const RecentPost = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
         nodes {
           frontmatter {
             title
@@ -18,7 +18,7 @@ const RecentPost = () => {
     }
   `);
 
-  return data.allMdx.nodes.map(post => ({
+  return data.allMarkdownRemark.nodes.map(post => ({
     title: post.frontmatter.title,
     author: post.frontmatter.author,
     slug: post.frontmatter.slug,

@@ -25,14 +25,7 @@ module.exports = {
         icon: "images/astro.png",
       },
     },
-    {
-      resolve: "gatsby-plugin-mdx",
-      options: {
-        defaultLayouts: {
-          default: require.resolve("./src/components/layout.js"),
-        },
-      },
-    },
+
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -40,6 +33,20 @@ module.exports = {
         path: "posts",
       },
     },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 400,
+            },
+          },
+        ],
+      },
+    },
+
     {
       resolve: "gatsby-source-filesystem",
       options: {

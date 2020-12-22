@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import Posts from "../hooks/all-blog";
+import ArrowLink from "./arrow-link";
 
 const Card = ({ post }) => {
   {
@@ -22,21 +23,7 @@ const Card = ({ post }) => {
       </h2>
       <p className="leading-relaxed mb-8">{post.excerpt}</p>
       <div className="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-200 mt-auto w-full">
-        <a className="text-indigo-500 inline-flex items-center">
-          Read
-          <svg
-            class="w-4 h-4 ml-2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M5 12h14"></path>
-            <path d="M12 5l7 7-7 7"></path>
-          </svg>
-        </a>
+        <ArrowLink link={post.slug} />
         <span className="text-gray-200 inline-flex items-center ml-auto leading-none text-sm">
           {post.date}
         </span>
