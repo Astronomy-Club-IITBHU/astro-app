@@ -5,7 +5,7 @@ slug: first-post
 description: These 3 astronauts will launch SpaceX's Crew-3 mission to the International Space Station in 2021
 date: 2020-11-20 18:21:31
 category: Astrophotography,Maths
-image: 00-blog/images/astronauts.webp
+image: ./images/astronauts.webp
 ---
 
 ## NASA and the European Space Agency (ESA) have selected a trio of astronauts to fly to space as part of SpaceX's Crew-3 mission.

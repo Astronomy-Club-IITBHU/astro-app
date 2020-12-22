@@ -50,10 +50,11 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
+        nams: "images",
         path: "images",
       },
     },
+
     {
       resolve: "gatsby-plugin-postcss",
       options: {
