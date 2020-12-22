@@ -8,9 +8,9 @@ const Event = ({ data }) => {
     <Layout>
 
       <div class="container my-12 mx-auto px-4 md:px-12">
-        <div class="flex flex-wrap -mx-1 lg:-mx-4 items-stretch gap-10 md:gap-0">
+        <div class="flex flex-wrap -mx-1 lg:-mx-4 gap-10 md:gap-0">
 
-          <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3" style={{ boxShadow: "0px -20px 40px rgba(33, 150, 243, 0.25)" }}>
+          <div class="flex flex-wrap my-1 px-1 w-full md:w-1/2 md:my-3 md:px-3 lg:my-4 lg:px-4 lg:w-1/3" style={{ boxShadow: "0px -20px 40px rgba(13, 26, 74, 1)" }}>
             <div class="w-full">
               <Img
                 fluid={data.allFile.edges[0].node.childImageSharp.fluid}
@@ -28,7 +28,7 @@ const Event = ({ data }) => {
             </div>
           </div>
 
-          <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3" style={{ boxShadow: "0px -20px 40px rgba(33, 150, 243, 0.25)" }}>
+          <div class="flex flex-wrap my-1 px-1 w-full md:w-1/2 md:my-3 md:px-3 lg:my-4 lg:px-4 lg:w-1/3" style={{ boxShadow: "0px -20px 40px rgba(13, 26, 74, 1)" }}>
             <div class="w-full">
               <Img
                 fluid={data.allFile.edges[1].node.childImageSharp.fluid}
@@ -46,7 +46,7 @@ const Event = ({ data }) => {
             </div>
           </div>
 
-          <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3" style={{ boxShadow: "0px -20px 40px rgba(33, 150, 243, 0.25)" }}>
+          <div class="flex flex-wrap my-1 px-1 w-full md:w-1/2 md:my-3 md:px-3 lg:my-4 lg:px-4 lg:w-1/3" style={{ boxShadow: "0px -20px 40px rgba(13, 26, 74, 1)" }}>
             <div class="w-full">
               <Img
                 fluid={data.allFile.edges[2].node.childImageSharp.fluid}
@@ -65,7 +65,7 @@ const Event = ({ data }) => {
             </div>
           </div>
 
-          <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3" style={{ boxShadow: "0px 20px 40px rgba(33, 150, 243, 0.25)" }}>
+          <div class="flex flex-wrap my-1 px-1 w-full md:w-1/2 md:my-3 md:px-3 lg:my-4 lg:px-4 lg:w-1/3" style={{ boxShadow: "0px 20px 40px rgba(13, 26, 74, 1)" }}>
             <div class="w-full">
               <Img
                 fluid={data.allFile.edges[3].node.childImageSharp.fluid}
@@ -84,7 +84,7 @@ const Event = ({ data }) => {
             </div>
           </div>
 
-          <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3" style={{ boxShadow: "0px 20px 40px rgba(33, 150, 243, 0.25)" }}>
+          <div class="flex flex-wrap my-1 px-1 w-full md:w-1/2 md:my-3 md:px-3 lg:my-4 lg:px-4 lg:w-1/3" style={{ boxShadow: "0px 20px 40px rgba(13, 26, 74, 1)" }}>
             <div class="w-full">
               <Img
                 fluid={data.allFile.edges[4].node.childImageSharp.fluid}
@@ -96,13 +96,13 @@ const Event = ({ data }) => {
             <div class="px-6 py-4 text-black bg-gray-200">
               <div class="font-bold text-xl mb-2">Yuri's Night</div>
               <p class="text-base">
-                Hosted in the month of April, Yuri's Night (named after Yuri Gagarin) is a commemoration of milestones in space exploration. It is a two-day event: On the first day
-                we have workshops and theoretical lectures, and on the second day, we host an observational session followed by a movie night.
+                Hosted in the month of April, Yuri's Night (named after Yuri Gagarin) is a commemoration of milestones in space exploration. 
+                It is a two-day event: On the first day we have workshops and theoretical lectures, and on the second day, we host an observational session followed by a movie night.
               </p>
             </div>
           </div>
 
-          <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3" style={{ boxShadow: "0px 20px 40px rgba(33, 150, 243, 0.25)" }}>
+          <div class="flex flex-wrap my-1 px-1 w-full md:w-1/2 md:my-3 md:px-3 lg:my-4 lg:px-4 lg:w-1/3" style={{ boxShadow: "0px 20px 40px rgba(13, 26, 74, 1)" }}>
             <div class="w-full">
               <Img
                 fluid={data.allFile.edges[5].node.childImageSharp.fluid}
@@ -116,7 +116,7 @@ const Event = ({ data }) => {
               <p class="text-base">
                 ETI is a telescope handling event where the participants' observational skills and telescope handling skills are tested in 3
                 rounds. The rounds consist of identifying celestial bodies with naked eye / telescope, mythology behind constellation, as well as tests
-                of telescope handling skills.
+                of telescope handling skills, thereby testing all-round skills.
               </p>
             </div>
           </div>
