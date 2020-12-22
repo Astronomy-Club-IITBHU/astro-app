@@ -6,7 +6,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           id
           frontmatter {
             slug
-            image
           }
         }
       }
@@ -26,7 +25,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: require.resolve("./src/templates/blog.js"),
       context: {
         slug: post.frontmatter.slug,
-        image: post.frontmatter.image,
       },
     });
   });

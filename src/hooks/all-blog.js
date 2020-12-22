@@ -10,6 +10,14 @@ const RecentPost = () => {
             author
             slug
             category
+            description
+            image {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
             date(formatString: "MMM DD, YYYY")
           }
           excerpt
@@ -25,6 +33,8 @@ const RecentPost = () => {
     excerpt: post.excerpt,
     date: post.frontmatter.date,
     category: post.frontmatter.category,
+    description: post.frontmatter.description,
+    image: post.frontmatter.image.childImageSharp.fluid,
   }));
 };
 

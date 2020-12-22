@@ -60,6 +60,15 @@ module.exports = {
         ],
       },
     },
+
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        nams: "images",
+        path: "images",
+      },
+    },
+
     {
       resolve: "gatsby-plugin-postcss",
       options: {
