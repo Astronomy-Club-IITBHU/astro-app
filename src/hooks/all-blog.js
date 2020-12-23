@@ -20,7 +20,7 @@ const RecentPost = () => {
             }
             date(formatString: "MMM DD, YYYY")
           }
-          excerpt
+          excerpt(pruneLength: 280)
         }
       }
     }
