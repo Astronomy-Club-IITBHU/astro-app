@@ -22,7 +22,7 @@ const BlogLayout = ({ post }) => {
             {post.title}
           </h3>
           <p className="mt-1">{post.excerpt}</p>
-          <div className="w-full flex flex-row ">
+          <div className="w-full flex flex-row pt-2">
             <Img
               className="h-10 w-10 rounded-full mr-2 object-cover"
               fluid={post.writer}

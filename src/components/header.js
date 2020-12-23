@@ -12,7 +12,7 @@ const Header = () => {
         <Link to="/">
           <h1 className="flex items-center text-gray-900 no-underline">
             <AstroSVG />
-            <span className="text-xl font-bold tracking-tight">{title}</span>
+            {/* <span className="text-xl font-bold tracking-tight">{title}</span> */}
           </h1>
         </Link>
 
