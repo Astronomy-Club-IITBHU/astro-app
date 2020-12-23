@@ -7,17 +7,17 @@ const Header = () => {
   const { title } = siteMetadata();
   const [isExpanded, toggleExpansion] = useState(false);
   return (
-    <header className="bg-gray-200 border-b-2" style={{ marginTop: "-3.5px" }}>
+    <header className="bg-gray-900" style={{ marginTop: "-3.5px" }}>
       <div className="flex flex-wrap items-center justify-between max-w-7xl p-4 mx-auto md:p-4">
         <Link to="/">
           <h1 className="flex items-center text-gray-900 no-underline">
-            <AstroSVG />
+            <AstroSVG color="white" />
             {/* <span className="text-xl font-bold tracking-tight">{title}</span> */}
           </h1>
         </Link>
 
         <button
-          className="items-center block px-3 py-2 text-gray-900 border border-gray rounded md:hidden"
+          className="items-center block px-3 py-2 text-white border border-gray rounded md:hidden"
           onClick={() => toggleExpansion(!isExpanded)}
         >
           <svg
@@ -45,8 +45,8 @@ const Header = () => {
               title: `Blogs`,
             },
             {
-              route: `/events`,
-              title: `Events`,
+              route: `/activities`,
+              title: `Activities`,
             },
             {
               route: `/gallery`,
@@ -54,7 +54,7 @@ const Header = () => {
             },
           ].map(link => (
             <Link
-              className="block mt-4 text-gray-900 no-underline md:inline-block md:mt-0 md:ml-6"
+              className="block mt-4 text-white font-bold	 no-underline md:inline-block md:mt-0 md:ml-6"
               key={link.title}
               to={link.route}
             >

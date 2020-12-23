@@ -3,14 +3,6 @@ import Layout from "../components/layout";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 
-const captions = {
-  IMG_12331: "great is great alwasy",
-};
-
-const giveCaption = () => {
-  return "LoremIpsum";
-};
-
 const Gallery = () => {
   const data = useStaticQuery(graphql`
     query Images {
@@ -18,7 +10,7 @@ const Gallery = () => {
         nodes {
           childImageSharp {
             fluid {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
           id
@@ -29,22 +21,29 @@ const Gallery = () => {
 
   return (
     <Layout>
-      {/* style={{width:"30%",display:"inline-block", padding:"3px",position:"relative"}} */}
-      <div className=" my-6 mx-4 grid lg:grid-cols-3 md:grid-cols-2 gap-4">
-        {data.images.nodes.map(image => (
-          <div className="rounded-md overflow-hidden shadow-lg relative group ">
-            <Img
-              className="group-hover:opacity-30 h-full rounded-md object-fill"
-              key={image.id}
-              fluid={image.childImageSharp.fluid}
-              alt="Images for  gallery"
-              imgStyle={{ objectFit: "contain" }}
-            />
-            <p className="text-lg text-green-300 absolute top-1/2 left-1/2 origin-center opacity-0 group-hover:opacity-100">
-              {giveCaption()}
-            </p>
-          </div>
-        ))}
+      <div className="container px-5 py-10 mx-auto mb-10 ">
+        <div className="flex flex-col text-center text-white w-full mb-10">
+          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">
+            Our camera roll
+          </h1>
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+            This gallery contains some of the pictures from our victories at
+            Inter-IIT and different colleges, Alumni's meet, partying,
+            orientations, workshops and Astrophotography.
+          </p>
+        </div>
+        <div className="flex flex-wrap -m-4">
+          {data.images.nodes.map(image => (
+            <div className=" md:w-1/3 w-full sm:w-1  p-2">
+              <Img
+                alt="gallery"
+                class="absolute inset-0 w-full h-full object-cover object-center"
+                fluid={image.childImageSharp.fluid}
+                style={{ height: "100%", width: "100%" }}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </Layout>
   );

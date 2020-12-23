@@ -3,7 +3,7 @@ import AstroSVG from "../../images/astro";
 
 const Footer = () => {
   return (
-    <footer className="text-gray-500 body-font border-t-2 border-fuchsia-600">
+    <footer className="bg-gray-900 ">
       <div className="container px-5 py-8 mx-auto max-w-3xl flex items-center sm:flex-row flex-col">
         <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-500">
           <AstroSVG color="white" />
