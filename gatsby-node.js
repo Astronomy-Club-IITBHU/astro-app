@@ -19,7 +19,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const posts = result.data.allMarkdownRemark.nodes;
 
   posts.forEach(post => {
-    console.log(post.frontmatter.slug);
     actions.createPage({
       path: `/blogs/${post.frontmatter.slug}`,
       component: require.resolve("./src/templates/blog.js"),

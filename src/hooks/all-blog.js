@@ -11,6 +11,13 @@ const RecentPost = () => {
             slug
             category
             description
+            writer {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
             image {
               childImageSharp {
                 fluid {
@@ -20,7 +27,7 @@ const RecentPost = () => {
             }
             date(formatString: "MMM DD, YYYY")
           }
-          excerpt
+          excerpt(pruneLength: 280)
         }
       }
     }
@@ -35,6 +42,7 @@ const RecentPost = () => {
     category: post.frontmatter.category,
     description: post.frontmatter.description,
     image: post.frontmatter.image.childImageSharp.fluid,
+    writer: post.frontmatter.writer.childImageSharp.fluid,
   }));
 };
 
