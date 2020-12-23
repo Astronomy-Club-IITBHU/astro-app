@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import siteMetadata from "../hooks/use-siteMetadata";
 import AstroSVG from "../../images/astro";
-import "../css/styles.css";
 
 const Header = () => {
   const { title } = siteMetadata();
@@ -13,7 +12,7 @@ const Header = () => {
         <Link to="/">
           <h1 className="flex items-center text-gray-900 no-underline">
             <AstroSVG />
-            <span className="text-xl font-bold tracking-tight hidden-small">{title}</span>
+            <span className="text-xl font-bold tracking-tight">{title}</span>
           </h1>
         </Link>
 
@@ -32,8 +31,9 @@ const Header = () => {
         </button>
 
         <nav
-          className={`${isExpanded ? `block` : `hidden`
-            } md:block md:items-center w-full md:w-auto`}
+          className={`${
+            isExpanded ? `block` : `hidden`
+          } md:block md:items-center w-full md:w-auto`}
         >
           {[
             {
