@@ -37,6 +37,10 @@ const TopCard = () => {
             </h2>
 
             <div className="flex mt-3">
+              <Img
+                className="h-10 w-10 rounded-full mr-2 object-cover"
+                fluid={post.writer}
+              />
               <div>
                 <p className="font-semibold text-gray-200 text-sm">
                   {post.author}

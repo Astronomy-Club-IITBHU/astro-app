@@ -22,9 +22,20 @@ const BlogLayout = ({ post }) => {
             {post.title}
           </h3>
           <p className="mt-1">{post.excerpt}</p>
-          <div className="w-full flex flex-row justify-between">
-            <p>{post.author}</p>
-            <p>{post.date}</p>
+          <div className="w-full flex flex-row ">
+            <Img
+              className="h-10 w-10 rounded-full mr-2 object-cover"
+              fluid={post.writer}
+            />
+            <div>
+              <p className="font-semibold text-gray-200 text-sm">
+                {post.author}
+              </p>
+              <p className="font-semibold text-gray-400 text-xs">
+                {" "}
+                {post.date}{" "}
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ description: These 3 astronauts will launch SpaceX's Crew-3 mission to the Inter
 date: 2020-11-20 18:21:31
 category: Astrophotography,Maths
 image: ./images/astronauts.webp
+writer: ../../images/writers/AnkitSusne.jpeg
 ---
 
 ## NASA and the European Space Agency (ESA) have selected a trio of astronauts to fly to space as part of SpaceX's Crew-3 mission.

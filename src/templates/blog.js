@@ -34,6 +34,12 @@ const BlogTemplate = ({ data }) => {
             </h2>
 
             <div className="flex mt-3">
+              <Img
+                className="h-10 w-10 rounded-full mr-2 object-cover"
+                fluid={
+                  data.markdownRemark.frontmatter.writer.childImageSharp.fluid
+                }
+              />
               <div>
                 <p className="font-semibold text-gray-200 text-sm">
                   {data.markdownRemark.frontmatter.author}
@@ -64,6 +70,13 @@ export const query = graphql`
         author
         description
         category
+        writer {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
         image {
           childImageSharp {
             fluid {
