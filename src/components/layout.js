@@ -3,7 +3,7 @@ import Header from "./header";
 import Helmet from "react-helmet";
 import useSiteMetadata from "../hooks/use-siteMetadata";
 import Footer from "./footer";
-import "../css/stars.css";
+import "../css/stars.min.css";
 import Star from "./stars";
 // import BackgroundImage from "gatsby-background-image";
 
