@@ -7,6 +7,7 @@ body {
 .stars.large {
   height: 2px;
   width: 2px;
+  border-radius: 100px;
   background: transparent;
   box-shadow: 542px 1519px #fff, 577px 600px #fff, 502px 1296px #fff,
     93px 1423px #fff, 405px 1872px #fff, 1265px 636px #fff, 1746px 180px #fff,
