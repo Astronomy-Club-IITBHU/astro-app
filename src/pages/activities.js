@@ -1,9 +1,26 @@
 import React from "react";
 import Layout from "../components/layout";
-import { graphql } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 
-const Event = ({ data }) => {
+const Event = () => {
+
+  const data = useStaticQuery(graphql`
+    query {
+      allFile( filter: { relativeDirectory: { eq: "events" } }, sort: { fields: [name], order: ASC } ) {
+        edges {
+          node {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+        }
+      }
+    }`
+  );
+  
   return (
     <Layout>
       <div class="container my-12 mx-auto px-4 md:px-12">
@@ -167,24 +184,5 @@ const Event = ({ data }) => {
     </Layout>
   );
 };
-
-export const some = graphql`
-  query {
-    allFile(
-      filter: { relativeDirectory: { eq: "events" } }
-      sort: { fields: [name], order: ASC }
-    ) {
-      edges {
-        node {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-    }
-  }
-`;
 
 export default Event;
