@@ -63,7 +63,7 @@ const Event = () => {
                 fluid={data.allFile.edges[1].node.childImageSharp.fluid}
                 style={{ height: "100%", width: "100%" }}
                 className="object-cover"
-                alt="Theoretical Sessions"
+                alt="Observational Sessions"
               />
             </div>
             <div class="px-6 py-4 text-black bg-gray-200">
@@ -88,7 +88,7 @@ const Event = () => {
                 fluid={data.allFile.edges[2].node.childImageSharp.fluid}
                 style={{ height: "100%", width: "100%" }}
                 className="object-cover"
-                alt="Theoretical Sessions"
+                alt="Telescon"
               />
             </div>
             <div class="px-6 py-4 text-black bg-gray-200">
@@ -113,7 +113,7 @@ const Event = () => {
                 fluid={data.allFile.edges[3].node.childImageSharp.fluid}
                 style={{ height: "100%", width: "100%" }}
                 className="object-cover"
-                alt="Theoretical Sessions"
+                alt="Supernova"
               />
             </div>
             <div class="px-6 py-4 text-black bg-gray-200">
@@ -138,7 +138,7 @@ const Event = () => {
                 fluid={data.allFile.edges[4].node.childImageSharp.fluid}
                 style={{ height: "100%", width: "100%" }}
                 className="object-cover"
-                alt="Theoretical Sessions"
+                alt="Yuri's Night"
               />
             </div>
             <div class="px-6 py-4 text-black bg-gray-200">
@@ -162,7 +162,7 @@ const Event = () => {
                 fluid={data.allFile.edges[5].node.childImageSharp.fluid}
                 style={{ height: "100%", width: "100%" }}
                 className="object-cover"
-                alt="Theoretical Sessions"
+                alt="ETI"
               />
             </div>
             <div class="px-6 py-4 text-black bg-gray-200">
