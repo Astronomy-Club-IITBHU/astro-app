@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/layout";
 import RecentPost from "../hooks/all-blog";
 import PostPreview from "../components/post-preview";
+import Equipment from "../components/equipment";
 
 // const platforms = [
 //   {
@@ -72,8 +73,7 @@ export default () => {
             <PostPreview key={post.slug} post={post} />
           ))}
         </div>
-
-        {/* <Social platform={platforms} /> */}
+        <Equipment />
       </div>
     </Layout>
   );
