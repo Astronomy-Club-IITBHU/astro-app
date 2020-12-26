@@ -29,7 +29,7 @@ const Members = () => {
 	return (
 		<Layout>
 			<div class="mx-auto px-4 sm:px-8">
-				<div class="py-8">
+				<div class="py-8 w-5/6 mx-auto">
 					<div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
 						<div class="inline-block min-w-full overflow-hidden">
 							{
