@@ -3,6 +3,8 @@ import Layout from "../components/layout";
 import RecentPost from "../hooks/all-blog";
 import PostPreview from "../components/post-preview";
 import Equipment from "../components/equipment";
+import BackgroundImage from "gatsby-background-image";
+import { graphql, useStaticQuery } from "gatsby";
 
 // const platforms = [
 //   {
@@ -21,60 +23,93 @@ import Equipment from "../components/equipment";
 //   },
 // ];
 
-const Front = () => {
+const HomeText = () => {
   return (
-    <>
-      <section className="text-gray-300 body-font">
-        <div className="container mx-auto px-5 py-15 flex flex-col  md:items-start md:text-left items-center">
-          <h1 className="title-font sm:text-4xl text-3xl mb-1 font-medium text-gray-200 ">
-            Since its foundation
-            <br className="hidden lg:inline-block" /> in{" "}
-            <span className="font-mono font-semibold ">2012</span>
-          </h1>
-          <p className="mb-8 leading-relaxed">
-            The Astronomy club aims to build on this fascination and brings
-            innovation and passion to its vision of spreading the awareness and
-            knowledge of astronomy and space sciences to the students. This
-            forum is built to spread the facts and news about all the events
-            taking part in the realm of Astronomy and the events being conducted
-            within the club in and out the campus.
-            <br className="hidden lg:inline-block" />
-            <br className="hidden lg:inline-block" />
-            If you have ever been curious to know the secrets preserved in this
-            universe's lap, if watching the night sky provides you the
-            indigenous curiosity, then you're at the right place. The Astronomy
-            club IIT BHU, an ambitious team driven by amateur astronomers,
-            strives to quench a student’s thirst for astronomy by organizing
-            various exciting events including{" "}
-            <span className="font-semibold">
-              Observational Sessions, Corona magazine, Astro-quiz, Telescon
-            </span>
-            , and many more. We do conduct online and offline workshops as well
-            for students to introduce them to basics of Astronomy.
-          </p>
+    <div class="max-w-3xl mx-auto rounded-lg  bg-gray-900 text-white  text-center 	">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font py-3 text-white ">
+        Welcome to the official website of the Astronomy Club IIT BHU.
+      </h1>
+      <p class="lg:w-2/3 mx-auto  py-3	 leading-relaxed text-base">
+        We, at Astronomy Club, start the session with an introductory workshop
+        in which students are made aware of many facts and a brief history of
+        astronomy and telescopes. We take this forward and explain the workings,
+        expectations and the vision associated with the club. The observatory
+        workshop introduces the students to all of our telescopes and we have
+        them observe the Moon and Mars through them. Pop science is a common
+        topic for discussion.
+      </p>
+      <h1 class="sm:text-3xl text-2xl font-medium title-font py-3 text-white ">
+        Our Vision
+      </h1>
+      <p class="lg:w-2/3 mx-auto  py-3	 leading-relaxed text-base">
+        The Astronomy club tries to bring out the inner astronomer that has been
+        hiding inside for so long. We have three major visions for the club:
+        Through our workshops and night sessions we wish to build up curiosity
+        and knowledge about the universe around us. Getting the astronomy
+        fanatics of the college educated and more comfortable all aspects of
+        astronomy from observational astronomy and telescope handling to Radio
+        Astronomy and other computational aspects. Propagating the ideas of last
+        year and bringing forth new ideas. Asteroid mining was a revolutionary
+        idea presented in a competition last year and we wish to propagate it
+        further as well as get new ideas. In the following academic year, the
+        club will be trying to get its own planetarium for various training and
+        research purposes. We are also looking forward to collaborate with
+        various other clubs and colleges to bring new and exquisite knowledge in
+        the club.
+      </p>
+    </div>
+  );
+};
+
+const Front = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "naut.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `);
+  const naut = data.file.childImageSharp.fluid;
+  return (
+    <BackgroundImage
+      fluid={naut}
+      className=" absolute left-0 top-0 w-full h-full z-0 bg-contain "
+      style={{ height: "100%", width: "100%" }}
+    >
+      <div className="py-40">
+        <div className="logo  home ">
+          <b>
+            Ast<span>ron</span>omy<span> </span>Club
+          </b>{" "}
+          <b>
+            <span>IIT</span>
+            <span>(BHU)</span>
+          </b>
         </div>
-      </section>
-    </>
+      </div>
+    </BackgroundImage>
   );
 };
 
 export default () => {
   const recentPost = RecentPost();
-  console.log(recentPost);
   return (
     <Layout>
-      <div className="px-4 py-8">
-        <Front />
-        <div>
-          <h1 className="text-gray-300 max-w-2xl text-4xl mx-auto px-8 py-4 ">
-            Recent Posts
-          </h1>
-          {recentPost.slice(0, 3).map(post => (
-            <PostPreview key={post.slug} post={post} />
-          ))}
-        </div>
-        <Equipment />
+      <Front />
+      <HomeText />
+      <div>
+        <h1 className="text-gray-300 max-w-2xl text-4xl mx-auto px-8 py-4 ">
+          Recent Posts
+        </h1>
+        {recentPost.slice(0, 3).map(post => (
+          <PostPreview key={post.slug} post={post} />
+        ))}
       </div>
+      <Equipment />
     </Layout>
   );
 };
