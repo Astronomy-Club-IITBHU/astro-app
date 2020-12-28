@@ -53,8 +53,8 @@ const Header = () => {
               title: `Gallery`,
             },
             {
-              route: `/members`,
-              title: `Members`
+              route: `/secys`,
+              title: `Secretaries`
             }
           ].map(link => (
             <Link
