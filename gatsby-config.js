@@ -54,6 +54,12 @@ module.exports = {
         path: "images",
       },
     },
+    {
+      resolve: "gatsby-background-image-es5",
+      options: {
+        specialChars: "/:",
+      },
+    },
     // {
     //   resolve: "gatsby-source-filesystem",
     //   options: {

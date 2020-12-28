@@ -8,7 +8,7 @@ const TopCard = () => {
   const post = posts[0];
 
   return (
-    <div className="  mt-0 md:mt-10 mb-10  ">
+    <div className="  mt-20 md:mt-20 mb-10  ">
       <div
         className="mb-4 md:mb-0 max-w-screen-lg mx-auto relative"
         style={{ height: 500 }}
