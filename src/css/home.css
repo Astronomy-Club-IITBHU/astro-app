@@ -14,8 +14,8 @@
 .logo b {
   font: 400 10vh "Vibur";
   color: #fee;
-  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444,
-    0 0 0.1em #ff4444, 0 10px 3px #000;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ade2e6, 0 0 0.5em #ade2e6,
+    0 0 0.1em #ade2e6, 0 10px 3px #000;
 }
 @media only screen and (max-width: 600px) {
   .logo b {
