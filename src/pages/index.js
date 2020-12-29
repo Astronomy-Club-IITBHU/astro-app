@@ -77,7 +77,7 @@ const Front = () => {
   return (
     <BackgroundImage
       fluid={naut}
-      className=" absolute left-0 top-0 w-full h-full z-0 bg-contain "
+      className="  bg-contain "
       style={{ height: "100%", width: "100%" }}
     >
       <div className="py-40">
