@@ -53,9 +53,9 @@ const Header = () => {
               title: `Gallery`,
             },
             {
-              route: `/secys`,
-              title: `Secretaries`
-            }
+              route: `/misc`,
+              title: `Misc.`,
+            },
           ].map(link => (
             <Link
               className="block mt-4 text-white font-bold no-underline md:inline-block md:mt-0 md:ml-6"

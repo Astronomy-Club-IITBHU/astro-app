@@ -5,28 +5,13 @@ import PostPreview from "../components/post-preview";
 import Equipment from "../components/equipment";
 import BackgroundImage from "gatsby-background-image";
 import { graphql, useStaticQuery } from "gatsby";
-
-// const platforms = [
-//   {
-//     name: "Instagram",
-//     imgLink: "https://www.flaticon.com/svg/static/icons/svg/2111/2111463.svg",
-//     desc: "Galore of the astronomical lore",
-//     link: "https://www.instagram.com/astro.iitbhu/?hl=en",
-//     linkText: "Follow us",
-//   },
-//   {
-//     name: "Facebook",
-//     imgLink: "https://www.flaticon.com/svg/static/icons/svg/145/145802.svg",
-//     desc: "We post on FB too!",
-//     link: "https://www.facebook.com/astro.iitbhu/",
-//     linkText: "Visit the page",
-//   },
-// ];
+import UpcomingEvents from "../components/upcoming-events";
+import AchieveProject from "../components/achieve-project";
 
 const HomeText = () => {
   return (
-    <div class="max-w-3xl mx-auto rounded-lg  bg-gray-900 text-white  text-center 	">
-      <h1 class="sm:text-3xl text-2xl font-medium title-font py-3 text-white ">
+    <div className="max-w-3xl mx-auto rounded-lg  bg-gray-900 text-white  text-center mb-20	">
+      <h1 className="sm:text-3xl text-2xl font-medium title-font py-3 text-white ">
         Welcome to the official website of the Astronomy Club IIT BHU.
       </h1>
       <p class="lg:w-2/3 mx-auto  py-3	 leading-relaxed text-base">
@@ -38,10 +23,10 @@ const HomeText = () => {
         them observe the Moon and Mars through them. Pop science is a common
         topic for discussion.
       </p>
-      <h1 class="sm:text-3xl text-2xl font-medium title-font py-3 text-white ">
+      <h1 className="sm:text-3xl text-2xl font-medium title-font py-3 text-white ">
         Our Vision
       </h1>
-      <p class="lg:w-2/3 mx-auto  py-3	 leading-relaxed text-base">
+      <p className="lg:w-2/3 mx-auto  py-3	 leading-relaxed text-base">
         The Astronomy club tries to bring out the inner astronomer that has been
         hiding inside for so long. We have three major visions for the club:
         Through our workshops and night sessions we wish to build up curiosity
@@ -81,10 +66,11 @@ const Front = () => {
       style={{ height: "100%", width: "100%" }}
     >
       <div className="py-40">
-        <div className="logo  home ">
+        <div className="logo ">
           <b>
-            Ast<span>ron</span>omy<span> </span>Club
-          </b>{" "}
+            <span>Ast</span>
+            ronomy<span> Club </span>
+          </b>
           <b>
             <span>IIT</span>
             <span>(BHU)</span>
@@ -95,21 +81,31 @@ const Front = () => {
   );
 };
 
+const DownDivs = () => {
+  return (
+    <div className="flex flex-wrap mb-10 text-white">
+      <AchieveProject />
+      <UpcomingEvents />
+    </div>
+  );
+};
+
 export default () => {
   const recentPost = RecentPost();
   return (
     <Layout>
       <Front />
       <HomeText />
-      <div>
+      {/* <div>
         <h1 className="text-gray-300 max-w-2xl text-4xl mx-auto px-8 py-4 ">
           Recent Posts
         </h1>
         {recentPost.slice(0, 3).map(post => (
           <PostPreview key={post.slug} post={post} />
         ))}
-      </div>
-      <Equipment />
+      </div> */}
+      {/* <Equipment /> */}
+      <DownDivs />
     </Layout>
   );
 };
