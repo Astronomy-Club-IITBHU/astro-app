@@ -4,7 +4,7 @@ import ArrowLink from "./arrow-link";
 import Img from "gatsby-image";
 const PostPreview = ({ post }) => {
   return (
-    <div className="max-w-2xl mb-5 mx-auto px-8 py-4 bg-white rounded-lg shadow-md  ">
+    <div className="max-w-2xl mb-5 mx-auto px-8 py-4 bg-white rounded-lg shadow-2xl	  ">
       <div className="flex justify-between items-center">
         <span className="font-light text-gray-600 text-sm">{post.date}</span>
       </div>
