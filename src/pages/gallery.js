@@ -14,6 +14,7 @@ const Gallery = () => {
             }
           }
           id
+          name
         }
       }
     }
@@ -36,7 +37,7 @@ const Gallery = () => {
           {data.images.nodes.map(image => (
             <div className=" md:w-1/3 w-full sm:w-1  p-2">
               <Img
-                alt="gallery"
+                alt={image.name}
                 class="absolute inset-0 w-full h-full object-cover object-center"
                 fluid={image.childImageSharp.fluid}
                 style={{ height: "100%", width: "100%" }}

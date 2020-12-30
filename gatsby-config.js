@@ -22,7 +22,7 @@ module.exports = {
         background_color: fullConfig.theme.colors.coolGray,
         theme_color: fullConfig.theme.colors.coolGray,
         display: "minimal-ui",
-        icon: "images/astro.png",
+        icon: "images/icon.png",
       },
     },
 
