@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 import Equipment from "../components/equipment";
+import Secys from "../components/secys";
 import Resources from "../components/resources";
 import {
   Accordion,
@@ -9,29 +10,6 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from "react-accessible-accordion";
-
-// const members = [
-// 	{
-// 		year: "2020-21",
-// 		names: ["Vaibhav Krishna Singh Raghav", "Aditya Keshari", "Abhishek Upadhyay"]
-// 	},
-// 	{
-// 		year: "2019-20",
-// 		names: ["Satyam Tyagi", "Govindswaroop Rahangdale", "Ayush Kumar Singh"]
-// 	},
-// 	{
-// 		year: "2018-19",
-// 		names: ["Yash Agarwal", "Sambhav Jain", "V S V Surya Prakash"]
-// 	},
-// 	{
-// 		year: "2017-18",
-// 		names: ["Archisha Patki", "Tarush Tiwari", "Vineesha Srivastava"]
-// 	},
-// 	{
-// 		year: "2016-17",
-// 		names: ["Soumyadeep Das", "Asmita Mekala", "Gaurav Somani"]
-// 	},
-// ];
 
 const Members = () => {
   return (
@@ -65,6 +43,20 @@ const Members = () => {
             </AccordionItemHeading>
             <AccordionItemPanel>
               <Resources />
+            </AccordionItemPanel>
+          </AccordionItem>
+          {/* Secys */}
+          <AccordionItem className="mt-5 bg-gray-900">
+            <AccordionItemHeading>
+              <AccordionItemButton>
+                <h1 className="text-2xl px-1 py-1   "> &gt; Secretaries</h1>
+                <p className="px-5 py-1">
+                  Past Secretaries and Joint Secretaries of the club.
+                </p>
+              </AccordionItemButton>
+            </AccordionItemHeading>
+            <AccordionItemPanel>
+              <Secys />
             </AccordionItemPanel>
           </AccordionItem>
         </Accordion>
