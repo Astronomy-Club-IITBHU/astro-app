@@ -35,6 +35,7 @@
     "gatsby-source-filesystem": "^2.5.0",
     "gatsby-transformer-remark": "^2.13.0",
     "gatsby-transformer-sharp": "^2.7.0",
+    "i": "^0.3.6",
     "postcss": "^8.1.8",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
