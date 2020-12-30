@@ -1,48 +1,5 @@
-import { info } from "autoprefixer";
 import React from "react";
-import Img from "../../images/astro.png";
 
-const upcomingEventData = {
-  Info: " ",
-  Date: "",
-  Time: "",
-  img_path: "", //relative path inside images folder has to be provided
-};
-
-const eventData = () => {
-  if (
-    upcomingEventData.Info !== "" &&
-    upcomingEventData.Date !== "" &&
-    upcomingEventData.Time !== ""
-  ) {
-    return (
-      <div className="shadow-md">
-        <p className="font-light text-center">{upcomingEventData.Info}</p>
-        <p className="grid grid-cols-2">
-          <span className="text-center font-semibold text-xl ">Date:</span>
-          <span className="text-center text-md">{upcomingEventData.Date}</span>
-        </p>
-        <p className="grid grid-cols-2">
-          <span className="text-center font-semibold text-xl">Time:</span>
-          <span className="text-center text-md">{upcomingEventData.Time}</span>
-        </p>
-      </div>
-    );
-  }
-  return (
-    <div>
-      <p className="italic my-2 text-sm text-center">No Upcoming Events</p>
-    </div>
-  );
-};
-const provideImage = () => {
-  if (upcomingEventData.img_path !== "") {
-    return (
-      <img src={require("../../images/" + upcomingEventData.img_path)}></img>
-    );
-  }
-  return <img src={require("../../images/Logo.jpg")}></img>;
-};
 const UpcomingEvents = () => {
   return (
     <div
@@ -56,12 +13,7 @@ const UpcomingEvents = () => {
     >
       <h1 className="text-2xl	text-center pb-5">Upcoming Events</h1>
       <p>
-        {
-          <div className="pt-2 pb-4 border-white border px-2 border-opacity-25 bg-gray-400 text-black rounded-sm">
-            {provideImage()}
-            {eventData()}
-          </div>
-        }
+        {" "}
         The Astronomy club tries to bring out the inner astronomer that has been
         hiding inside for so long. We have three major visions for the club:
         Through our workshops and night sessions we wish to build up curiosity
