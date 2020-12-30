@@ -66,7 +66,7 @@ const Front = () => {
       style={{ height: "100%", width: "100%" }}
     >
       <div className="py-40">
-        <div className="logo ">
+        <div className="logo">
           <b>
             <span>Ast</span>
             ronomy<span> Club </span>
