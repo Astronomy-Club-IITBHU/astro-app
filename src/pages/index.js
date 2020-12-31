@@ -2,12 +2,12 @@ import React from "react";
 import Layout from "../components/layout";
 import BackgroundImage from "gatsby-background-image";
 import { graphql, useStaticQuery } from "gatsby";
-// import UpcomingEvents from "../components/upcoming-events";
+import UpcomingEvents from "../components/upcoming-events";
 import AchieveProject from "../components/achieve-project";
 
 const HomeText = () => {
   return (
-    <div className="max-w-3xl mx-auto rounded-lg  bg-gray-900 text-white  text-center mb-20	pb-5">
+    <div className="max-w-3xl mx-auto rounded-lg  bg-gray-900 text-white font-mono  text-center mb-20	pb-5">
       <h1 className="sm:text-3xl text-2xl font-medium title-font py-5 text-white ">
         Welcome to our official website!
       </h1>
@@ -69,7 +69,7 @@ const DownDivs = () => {
   return (
     <div className="flex flex-wrap mb-10 text-white">
       <AchieveProject />
-      {/* <UpcomingEvents /> */}
+      <UpcomingEvents />
     </div>
   );
 };
