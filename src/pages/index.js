@@ -102,12 +102,12 @@ const Clock = props => {
 export default () => {
   return (
     <Layout>
-      {/* <Front />
+      <Front />
       <HomeText />
 
       <stayTuned />
-      <DownDivs /> */}
-      <Clock />
+      <DownDivs />
+      {/* <Clock /> */}
     </Layout>
   );
 };
