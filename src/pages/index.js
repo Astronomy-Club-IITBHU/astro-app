@@ -11,7 +11,7 @@ const HomeText = () => {
       <h1 className="sm:text-3xl text-2xl font-medium title-font py-5 text-white ">
         Welcome to our official website!
       </h1>
-      <p className="lg:w-2/3 mx-auto  py-3	 leading-relaxed text-base">
+      <p className="lg:w-2/3 mx-auto  py-3	px-2 leading-relaxed text-base">
         Do you often turn your eyes to the stars? Which answers are you looking
         for, stargazing? Every person has their reasons for that, but some great
         minds have shared their thoughts to inspire you to live, love, and
@@ -19,25 +19,12 @@ const HomeText = () => {
         for which you are looking.
       </p>
 
-      <p className="lg:w-2/3 mx-auto  py-3	 leading-relaxed text-base">
+      <p className="lg:w-2/3 mx-auto  py-3	px-2 leading-relaxed text-base">
         The Astronomy Club IIT BHU, an ambitious team driven by amateur
         astronomers, strives to quench students' thirst for astronomy by
         organizing various exciting events, from observational sessions to
         astroquizzes, telescope handling to Radio Astronomy, publishing the
         Club's very own corona magazine and many more.
-      </p>
-      <p className="lg:w-2/3 mx-auto  py-3	 leading-relaxed text-base">
-        The session starts with introductory workshops and moves forward by
-        elucidating the Club's workings and vision. Analogously, the
-        observational sessions take the students to the very beginning of the
-        realm of Astronomy. We also conduct online and offline workshops as well
-        for students to introduce them to the basics of Astronomy. Everyone is
-        welcome to all these events. Interest and passion for the field is all
-        we seek after! Since its foundation in 2012, We at Astronomy Club IIT
-        BHU aim to build-on this fascination and bring innovation and passion to
-        its vision of spreading awareness and knowledge in all aspects of
-        astronomy, from Observational Astronomy, Telescope handling to Radio
-        Astronomy and other computational aspects.
       </p>
     </div>
   );
@@ -87,13 +74,40 @@ const DownDivs = () => {
   );
 };
 
+const Clock = props => {
+  const [date, setDate] = React.useState(new Date());
+
+  //Replaces componentDidMount and componentWillUnmount
+  React.useEffect(() => {
+    var timerID = setInterval(() => tick(), 1000);
+    return function cleanup() {
+      clearInterval(timerID);
+    };
+  });
+
+  function tick() {
+    setDate(new Date());
+  }
+
+  return (
+    <div className="text-white mx-auto my-20 text-center">
+      <h1 className="text-white">We will be live soon!</h1>
+      <h1 className="md:text-9xl text-3xl	font-mono ">
+        {date.toLocaleTimeString()}{" "}
+      </h1>
+    </div>
+  );
+};
+
 export default () => {
   return (
     <Layout>
-      <Front />
+      {/* <Front />
       <HomeText />
 
-      <DownDivs />
+      <stayTuned />
+      <DownDivs /> */}
+      <Clock />
     </Layout>
   );
 };
