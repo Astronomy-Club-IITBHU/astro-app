@@ -5,7 +5,6 @@ import useSiteMetadata from "../hooks/use-siteMetadata";
 import Footer from "./footer";
 import "../css/stars.min.css";
 import Star from "./stars";
-// import BackgroundImage from "gatsby-background-image";
 
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata();
