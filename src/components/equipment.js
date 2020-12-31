@@ -43,7 +43,7 @@ const Table = () => {
                             <p class="text-gray-900 font-semibold">{data.name}</p>
                           </div>
                           <div class="w-1/2 text-center">
-                            <p class="relative pr-2 text-gray-800 text-sm">{data.desc}</p>
+                            <p class="relative pr-2 text-gray-800 text-sm lg:pr-5">{data.desc}</p>
                           </div>
                         </td>
                       </tr>
