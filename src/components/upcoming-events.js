@@ -3,7 +3,7 @@ import React from "react";
 const UpcomingEvents = () => {
   return (
     <div
-      className=" lg:w-1/5 rounded-lg bg-gray-900 md:w-1/2 px-5 py-5 mx-5 bg-white overflow-hidden mb-5	"
+      className=" lg:w-1/5 rounded-lg bg-gray-900 md:w-1/2 px-5 py-5  bg-white overflow-hidden mb-5	"
       style={{
         height: "1%",
         position: "-webkit-sticky",

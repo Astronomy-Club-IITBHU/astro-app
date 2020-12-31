@@ -10,37 +10,37 @@ import AchieveProject from "../components/achieve-project";
 
 const HomeText = () => {
   return (
-    <div className="max-w-3xl mx-auto rounded-lg  bg-gray-900 text-white  text-center mb-20	">
-      <h1 className="sm:text-3xl text-2xl font-medium title-font py-3 text-white ">
-        Welcome to the official website of the Astronomy Club IIT BHU.
+    <div className="max-w-3xl mx-auto rounded-lg  bg-gray-900 text-white  text-center mb-20	pb-5">
+      <h1 className="sm:text-3xl text-2xl font-medium title-font py-5 text-white ">
+        Welcome to our official website!
       </h1>
       <p class="lg:w-2/3 mx-auto  py-3	 leading-relaxed text-base">
-        We, at Astronomy Club, start the session with an introductory workshop
-        in which students are made aware of many facts and a brief history of
-        astronomy and telescopes. We take this forward and explain the workings,
-        expectations and the vision associated with the club. The observatory
-        workshop introduces the students to all of our telescopes and we have
-        them observe the Moon and Mars through them. Pop science is a common
-        topic for discussion.
+        Do you often turn your eyes to the stars? Which answers are you looking
+        for, stargazing? Every person has their reasons for that, but some great
+        minds have shared their thoughts to inspire you to live, love, and
+        create. We, at Astronomy Club IIT BHU might help you find the answers
+        for which you are looking.
       </p>
-      <h1 className="sm:text-3xl text-2xl font-medium title-font py-3 text-white ">
-        Our Vision
-      </h1>
+
       <p className="lg:w-2/3 mx-auto  py-3	 leading-relaxed text-base">
-        The Astronomy club tries to bring out the inner astronomer that has been
-        hiding inside for so long. We have three major visions for the club:
-        Through our workshops and night sessions we wish to build up curiosity
-        and knowledge about the universe around us. Getting the astronomy
-        fanatics of the college educated and more comfortable all aspects of
-        astronomy from observational astronomy and telescope handling to Radio
-        Astronomy and other computational aspects. Propagating the ideas of last
-        year and bringing forth new ideas. Asteroid mining was a revolutionary
-        idea presented in a competition last year and we wish to propagate it
-        further as well as get new ideas. In the following academic year, the
-        club will be trying to get its own planetarium for various training and
-        research purposes. We are also looking forward to collaborate with
-        various other clubs and colleges to bring new and exquisite knowledge in
-        the club.
+        The Astronomy Club IIT BHU, an ambitious team driven by amateur
+        astronomers, strives to quench students' thirst for astronomy by
+        organizing various exciting events, from observational sessions to
+        astroquizzes, telescope handling to Radio Astronomy, publishing the
+        Club's very own corona magazine and many more.
+      </p>
+      <p className="lg:w-2/3 mx-auto  py-3	 leading-relaxed text-base">
+        The session starts with introductory workshops and moves forward by
+        elucidating the Club's workings and vision. Analogously, the
+        observational sessions take the students to the very beginning of the
+        realm of Astronomy. We also conduct online and offline workshops as well
+        for students to introduce them to the basics of Astronomy. Everyone is
+        welcome to all these events. Interest and passion for the field is all
+        we seek after! Since its foundation in 2012, We at Astronomy Club IIT
+        BHU aim to build-on this fascination and bring innovation and passion to
+        its vision of spreading awareness and knowledge in all aspects of
+        astronomy, from Observational Astronomy, Telescope handling to Radio
+        Astronomy and other computational aspects.
       </p>
     </div>
   );
