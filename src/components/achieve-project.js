@@ -1,4 +1,6 @@
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
 
 const AchieveProject = () => {
   const achievements = [
@@ -54,27 +56,57 @@ const AchieveProject = () => {
   const projects = [
     {
       name: "Planetarium",
-      desc:
-        "With the support of SERAI, the Astronomy Club has undertaken the project to build a planetarium to promote astronomy culture within the college. Being one of the first steps to enter into astronomy, the planetarium helps to attract people into amateur astronomy. The planetarium serves the purpose of observing the night sky of Varanasi as well as other regions of the world regardless of weather conditions and time of the day. The planetarium will have sufficient space for 15-20 people to sit inside comfortably. The planetarium will be used primarily to conduct observational sessions. It will also be used to conduct various competitions and events throughout the year.",
+      desc: "With the support of SERAI, the Astronomy Club has undertaken the project to build a planetarium. The planetarium helps in attracting people towards amateur astronomy. The planetarium serves the purpose of observing the night sky of Varanasi as well as other regions of the world regardless of weather conditions and time of the day. The planetarium will have an occupancy of 15-20 people. Its major application will be to conduct observational sessions."
     },
     {
       name: "Horn Antenna",
-      desc:
-        "Radio astronomy is a major field in observational and computational astronomy. There are many types of antennae to observe radio waves, the most basic which is a Horn Antenna. To encourage advanced astronomy in the institute, the Astronomy Club is building its own Pyramidal Horn Antenna. Upon its completion, the club will be able to conduct its own radio observations and analyze and study the data obtained.",
-    },
-  ];
+      desc: "Radio astronomy is a major field in observational and computational astronomy. There are many types of antennae to observe radio waves, the most basic of which is Horn Antenna. To encourage advanced astronomy in the institute, the Astronomy Club is building its own Pyramidal Horn Antenna. Upon its completion, the club will be able to conduct its own radio observations and analyze and study the data obtained."
+    }
+  ]
+
+  const projectImgs = useStaticQuery(graphql`
+    query {
+      allFile(filter: { relativeDirectory: { eq: "projects" } }, sort: { fields: [name], order: ASC }) {
+        edges {
+          node {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+        }
+      }
+    }`
+  );
+
   return (
-    <div className="lg:w-2/3 rounded-lg bg-gray-900 md:w-1/2 px-5 py-5 mx-10 mb-5 bg-white px-10">
+    <div className="lg:w-2/3 rounded-lg bg-gray-900 md-1/2 px-5 py-5 mx-5 md:mx-10 mb-5 bg-white"  style={{ boxShadow: "0px 0px 80px black" }}>
+
       <div className="text-2xl text-center pb-2 mt-5">Projects</div>
       <hr style={{ borderTop: "1px dotted lightgray" }}></hr>
-      {projects.map(data => {
-        return (
-          <div className="my-3">
-            <div className="inline text-xl">{data.name}</div>
-            <p className="my-1 text-gray-200">{data.desc}</p>
-          </div>
-        );
-      })}
+      {
+        projects.map((data, index) => {
+          return (
+            <div class="my-3">
+              <div class="inline text-xl">{data.name}</div>
+              <p class="my-1 text-gray-200">{data.desc}</p>
+              {
+                index === 0 &&
+                <div className="mx-auto w-full md:w-5/6 lg:w-2/3 my-5">
+                  <Img
+                    alt={data.name}
+                    class="absolute inset-0 w-full h-full object-cover object-center"
+                    fluid={projectImgs.allFile.edges[0].node.childImageSharp.fluid}
+                    style={{ height: "100%", width: "100%" }}
+                  />
+                  <p class="text-center text-gray-400 italic">Planetarium under construction</p>
+                </div>
+              }
+            </div>
+          )
+        })
+      }
 
       <div className="text-2xl	text-center pb-2">Recent Achievements</div>
       <hr style={{ borderTop: "1px dotted lightgray" }}></hr>
