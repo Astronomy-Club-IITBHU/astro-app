@@ -74,40 +74,14 @@ const DownDivs = () => {
   );
 };
 
-const Clock = props => {
-  const [date, setDate] = React.useState(new Date());
-
-  //Replaces componentDidMount and componentWillUnmount
-  React.useEffect(() => {
-    var timerID = setInterval(() => tick(), 1000);
-    return function cleanup() {
-      clearInterval(timerID);
-    };
-  });
-
-  function tick() {
-    setDate(new Date());
-  }
-
-  return (
-    <div className="text-white mx-auto my-20 text-center">
-      <h1 className="text-white">We will be live soon!</h1>
-      <h1 className="md:text-9xl text-3xl	font-mono ">
-        {date.toLocaleTimeString()}{" "}
-      </h1>
-    </div>
-  );
-};
-
 export default () => {
   return (
     <Layout>
-      {/* <Front />
+      <Front />
       <HomeText />
 
       <stayTuned />
-      <DownDivs /> */}
-      <Clock />
+      <DownDivs />
     </Layout>
   );
 };
