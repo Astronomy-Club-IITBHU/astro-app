@@ -14,7 +14,7 @@ import {
 const Members = () => {
   return (
     <Layout>
-      <div className="my-10 mx-auto w-full md:w-7/12  text-white text">
+      <div className="my-10 mx-auto w-full md:w-7/12  text-white text" style={{ boxShadow: "0px 0px 80px black" }}>
         <Accordion allowZeroExpanded>
           {/* Equipment */}
           <AccordionItem className="mt-5 bg-gray-900">
