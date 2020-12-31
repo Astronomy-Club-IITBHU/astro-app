@@ -1,8 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
 import RecentPost from "../hooks/all-blog";
-import PostPreview from "../components/post-preview";
-import Equipment from "../components/equipment";
 import BackgroundImage from "gatsby-background-image";
 import { graphql, useStaticQuery } from "gatsby";
 import UpcomingEvents from "../components/upcoming-events";
@@ -96,15 +94,7 @@ export default () => {
     <Layout>
       <Front />
       <HomeText />
-      {/* <div>
-        <h1 className="text-gray-300 max-w-2xl text-4xl mx-auto px-8 py-4 ">
-          Recent Posts
-        </h1>
-        {recentPost.slice(0, 3).map(post => (
-          <PostPreview key={post.slug} post={post} />
-        ))}
-      </div> */}
-      {/* <Equipment /> */}
+
       <DownDivs />
     </Layout>
   );
