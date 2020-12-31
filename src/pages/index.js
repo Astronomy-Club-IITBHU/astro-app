@@ -1,8 +1,5 @@
 import React from "react";
 import Layout from "../components/layout";
-import RecentPost from "../hooks/all-blog";
-import PostPreview from "../components/post-preview";
-import Equipment from "../components/equipment";
 import BackgroundImage from "gatsby-background-image";
 import { graphql, useStaticQuery } from "gatsby";
 import UpcomingEvents from "../components/upcoming-events";
@@ -14,7 +11,7 @@ const HomeText = () => {
       <h1 className="sm:text-3xl text-2xl font-medium title-font py-5 text-white ">
         Welcome to our official website!
       </h1>
-      <p class="lg:w-2/3 mx-auto  py-3	 leading-relaxed text-base">
+      <p className="lg:w-2/3 mx-auto  py-3	 leading-relaxed text-base">
         Do you often turn your eyes to the stars? Which answers are you looking
         for, stargazing? Every person has their reasons for that, but some great
         minds have shared their thoughts to inspire you to live, love, and
@@ -91,20 +88,11 @@ const DownDivs = () => {
 };
 
 export default () => {
-  const recentPost = RecentPost();
   return (
     <Layout>
       <Front />
       <HomeText />
-      {/* <div>
-        <h1 className="text-gray-300 max-w-2xl text-4xl mx-auto px-8 py-4 ">
-          Recent Posts
-        </h1>
-        {recentPost.slice(0, 3).map(post => (
-          <PostPreview key={post.slug} post={post} />
-        ))}
-      </div> */}
-      {/* <Equipment /> */}
+
       <DownDivs />
     </Layout>
   );

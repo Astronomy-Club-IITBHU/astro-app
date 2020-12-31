@@ -2,10 +2,16 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Img from "gatsby-image";
+import SEO from "../components/seo";
 
 const BlogTemplate = ({ data }) => {
+  const seoData = {
+    title: data.markdownRemark.frontmatter.title,
+    description: data.markdownRemark.frontmatter.description,
+  };
   return (
     <Layout>
+      <SEO post={seoData} />
       <div className="  mt-0 md:mt-10 mb-10  ">
         <div
           className="mb-4 md:mb-0 w-full max-w-screen-md mx-auto relative"

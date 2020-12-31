@@ -6,7 +6,9 @@ const fullConfig = resolveConfig(tailwindConfig);
 module.exports = {
   siteMetadata: {
     title: "Astronomy Club IIT BHU",
-    description: "club for people interested in astronomy",
+    description:
+      "The Astronomy Club IIT BHU, an ambitious team driven by amateur astronomers",
+    baseUrl: "https://astroiitbhu.in/",
   },
 
   plugins: [
@@ -60,13 +62,7 @@ module.exports = {
         specialChars: "/:",
       },
     },
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "events",
-    //     path: `${__dirname}/images/events`,
-    //   },
-    // },
+
     {
       resolve: "gatsby-plugin-postcss",
       options: {
