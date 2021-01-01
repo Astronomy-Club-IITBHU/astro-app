@@ -58,7 +58,7 @@ const Header = () => {
             },
           ].map(link => (
             <Link
-              className="block mt-4 text-white font-bold no-underline md:inline-block md:mt-0 md:ml-6"
+              className="block mt-4 text-white font-bold no-underline md:inline-block md:mt-0 md:ml-6 font-mono"
               key={link.title}
               to={link.route}
             >

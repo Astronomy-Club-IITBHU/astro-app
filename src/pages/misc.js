@@ -14,13 +14,16 @@ import {
 const Members = () => {
   return (
     <Layout>
-      <div className="my-10 mx-auto w-full md:w-7/12  text-white text" style={{ boxShadow: "0px 0px 80px black" }}>
+      <div
+        className="my-10 mx-auto w-full font-body md:w-7/12 text-white "
+        // style={{ boxShadow: "0px 0px 80px black" }}
+      >
         <Accordion allowZeroExpanded>
           {/* Equipment */}
           <AccordionItem className="mt-5 bg-gray-900">
             <AccordionItemHeading>
               <AccordionItemButton>
-                <h1 className="text-2xl px-1 py-1   "> &gt; Equipments</h1>
+                <h1 className="text-2xl px-4 py-1   "> &gt; Equipments</h1>
                 <p className="px-5 py-1">
                   Partial inventory of Astronomy Club equipment
                 </p>
@@ -34,7 +37,7 @@ const Members = () => {
           <AccordionItem className="mt-5 bg-gray-900">
             <AccordionItemHeading>
               <AccordionItemButton>
-                <h1 className="text-2xl px-1 py-1   "> &gt; Resources</h1>
+                <h1 className="text-2xl px-4 py-1   "> &gt; Resources</h1>
                 <p className="px-5 py-1">
                   List of all the resources for the students to start exploring
                   Astronomy.
@@ -49,7 +52,7 @@ const Members = () => {
           <AccordionItem className="mt-5 bg-gray-900">
             <AccordionItemHeading>
               <AccordionItemButton>
-                <h1 className="text-2xl px-1 py-1   "> &gt; Secretaries</h1>
+                <h1 className="text-2xl px-4 py-1   "> &gt; Secretaries</h1>
                 <p className="px-5 py-1">
                   Past Secretaries and Joint Secretaries of the club.
                 </p>

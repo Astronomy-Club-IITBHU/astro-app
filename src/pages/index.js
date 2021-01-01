@@ -7,7 +7,7 @@ import AchieveProject from "../components/achieve-project";
 
 const HomeText = () => {
   return (
-    <div className="max-w-3xl mx-auto rounded-lg  bg-gray-900 text-white  text-center mb-20	pb-5">
+    <div className="max-w-3xl mx-auto rounded-lg  bg-gray-900 text-white font-mono  text-center mb-20	pb-5">
       <h1 className="sm:text-3xl text-2xl font-medium title-font py-5 text-white ">
         Welcome to our official website!
       </h1>
@@ -74,40 +74,14 @@ const DownDivs = () => {
   );
 };
 
-const Clock = props => {
-  const [date, setDate] = React.useState(new Date());
-
-  //Replaces componentDidMount and componentWillUnmount
-  React.useEffect(() => {
-    var timerID = setInterval(() => tick(), 1000);
-    return function cleanup() {
-      clearInterval(timerID);
-    };
-  });
-
-  function tick() {
-    setDate(new Date());
-  }
-
-  return (
-    <div className="text-white mx-auto my-20 text-center">
-      <h1 className="text-white">We will be live soon!</h1>
-      <h1 className="md:text-9xl text-3xl	font-mono ">
-        {date.toLocaleTimeString()}{" "}
-      </h1>
-    </div>
-  );
-};
-
 export default () => {
   return (
     <Layout>
-      {/* <Front />
+      <Front />
       <HomeText />
 
       <stayTuned />
-      <DownDivs /> */}
-      <Clock />
+      <DownDivs />
     </Layout>
   );
 };

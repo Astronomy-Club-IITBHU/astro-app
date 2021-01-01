@@ -12,7 +12,7 @@ const BlogTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO post={seoData} />
-      <div className="  mt-0 md:mt-10 mb-10  ">
+      <div className="  mt-0 md:mt-10 mb-10 font-serif">
         <div
           className="mb-4 md:mb-0 w-full max-w-screen-md mx-auto relative"
           style={{ height: 400 }}
