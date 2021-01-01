@@ -12,7 +12,7 @@ const Secys = () => {
 		},
 		{
 			year: "2018-19",
-			names: ["Yash Agarwal", "Sambhav Jain", "V S V Surya Prakash"]
+			names: ["Yash Agarwal", "Sambhav Jain", "V.S.V. Surya Prakash"]
 		},
 		{
 			year: "2017-18",
@@ -32,8 +32,12 @@ const Secys = () => {
 		},
 		{
 			year: "2013-14",
-			names: ["Himanshu Gangwar", "Manasa Perikela"]
-		},
+			names: ["Himanshu Gangwar", "P. Manasa"]
+    },
+    {
+			year: "2012-13",
+			names: ["Praveen Sharma", "Saummay Bagga"]
+		}
 	];
 
 	return (
