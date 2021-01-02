@@ -59,36 +59,51 @@ const Resources = () => {
   return (
     <div className="bg-gray-900">
       <div className="mx-4 pt-4">
-        <div className="uppercase text-2xl text-gray-100 border-b-2 border-green-200 border-opacity-50 border-dotted">
-          books:
+        <div class="flex justify-center my-5">
+          <div class="text-gray-200 text-4xl ">Books</div>
         </div>
-        <ul className="list-disc list-inside">
+        <div className="bg-gray-300 rounded-md overflow-hidden mx-8">
           {books.map(book => (
-            <li className="text-green-900 hover:text-green-400">
-              <a href={book.path}>{book.name}</a>
-            </li>
+            <div className="text-center text-black py-2 border-b-2 border-gray-800 hover:text-white hover:bg-gray-800">
+              <a
+                href={book.path}
+                className="text-lg font-bold inline-block w-full hover:text-2xl"
+              >
+                {book.name}
+              </a>
+            </div>
           ))}
-        </ul>
-        <div className="uppercase text-2xl text-gray-100 border-b-2 border-green-200 border-opacity-50 border-dotted">
-          Videos:
         </div>
-        <ul className="list-disc list-inside">
+        <div class="flex justify-center my-5">
+          <div class="text-gray-200 text-4xl ">Videos</div>
+        </div>
+        <div className="bg-gray-300 rounded-md overflow-hidden mx-8">
           {playlist.map(vedio => (
-            <li className="text-green-900 hover:text-green-400">
-              <a href={vedio.link}>{vedio.name}</a>
-            </li>
+            <div className="text-center text-black py-2 border-b-2 border-gray-800 hover:text-white hover:bg-gray-800">
+              <a
+                href={vedio.link}
+                className="text-lg font-bold inline-block w-full hover:text-2xl"
+              >
+                {vedio.name}
+              </a>
+            </div>
           ))}
-        </ul>
-        <div className="uppercase text-2xl text-gray-100 border-b-2 border-green-200 border-opacity-50 border-dotted">
-          Magazines:
         </div>
-        <ul className="list-disc list-inside">
-          {Magazines.map(Magazine => (
-            <li className="text-green-900 hover:text-green-400">
-              <a href={Magazine.path}>{Magazine.name}</a>
-            </li>
+        <div class="flex justify-center my-5">
+          <div class="text-gray-200 text-4xl ">Magazines</div>
+        </div>
+        <div className="bg-gray-300 rounded-md overflow-hidden mx-8">
+          {Magazines.map(magazine => (
+            <div className="text-center text-black py-2 border-b-2 border-gray-800 hover:text-white hover:bg-gray-800">
+              <a
+                href={magazine.path}
+                className="text-lg font-bold inline-block w-full visited:text-brown"
+              >
+                {magazine.name}
+              </a>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );
