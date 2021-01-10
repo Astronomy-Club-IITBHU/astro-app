@@ -5,19 +5,6 @@ import Img from "gatsby-image";
 const AchieveProject = () => {
   const achievements = [
     {
-      name: "Inter IIT Tech Meet",
-      events: [
-        {
-          eventName: "Star Cluster Identifying",
-          result: [
-            "Bronze (Sambhav Jain, Yash Agrawal, Abhishek & Govindswaroop Rahangdale)",
-          ],
-          link: "https://github.com/Astronomy-Club-IITBHU/star-cluster-identifier",
-          linkText: "GitHub Repo"
-        },
-      ],
-    },
-    {
       name: "NSSC 2019, IIT KGP",
       events: [
         {
@@ -53,6 +40,19 @@ const AchieveProject = () => {
         },
       ],
     },
+    {
+      name: "Inter IIT Tech Meet, 2018",
+      events: [
+        {
+          eventName: "Star Cluster Identifying",
+          result: [
+            "Bronze (Sambhav Jain, Yash Agrawal, Abhishek & Govindswaroop Rahangdale)",
+          ],
+          link: "https://github.com/Astronomy-Club-IITBHU/star-cluster-identifier",
+          linkText: "GitHub Repo"
+        },
+      ],
+    }
   ];
 
   const projects = [
