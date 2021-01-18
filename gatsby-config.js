@@ -17,7 +17,7 @@ module.exports = {
     title: "Astronomy Club IIT BHU",
     description:
       "The Astronomy Club IIT BHU, an ambitious team driven by amateur astronomers",
-    baseUrl: "https://astroiitbhu.in/",
+    base: "https://astroiitbhu.in/",
   },
 
   plugins: [
