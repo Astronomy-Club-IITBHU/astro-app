@@ -18,7 +18,7 @@ const UpcomingEvents = () => {
 
   return (
     <div
-      className=" lg:w-1/5 rounded-lg bg-gray-900 md:w-1/2 px-5 py-5  bg-white overflow-hidden mb-5	"
+      className=" lg:w-1/4 rounded-lg bg-gray-900 md:w-1/2 px-5 py-5  bg-white overflow-hidden mb-5	"
       style={{
         height: "1%",
         position: "-webkit-sticky",
@@ -30,12 +30,20 @@ const UpcomingEvents = () => {
       <Img fluid={image} />
       <p className="py-2 leading-relaxed text-base">
         {" "}
-        The Astronomy Club IIT BHU has something special planned for the new
-        year. With the start of the year, we are launching our standalone
-        website on the 1st of January 2021. The website will be the source of
-        information for upcoming events and blogs. We have put some resources
-        and recommended videos to kickstart your journey in field of astronomy.
-        We wish everyone a very safe, cherishing and prosperous new year.
+        Greetings from Astronomy Club ! The coronavirus may have halted your
+        lives but do not let it halt your passion for astronomy. We bring you
+        an opportunity to show off your knowledge and enchant with your words. 
+        The Astronomy Club presents CORONA ARTICLE WRITING CONTEST (CAWC).
+        Write an article on any topic related to astronomy, and the best two
+        articles will be published in the upcoming edition of The Corona Magazine.
+        <h1 class="text-xl">Rules</h1>
+        <ul class="list-disc list-inside">
+          <li>Only one article allowed per person</li>
+          <li>Word limit: 700-1000 words</li>
+          <li>Languages: English & Hindi</li>
+          <li>Submission deadline: 25th January, 2021</li>
+          <li>Submit as a word document <a class="text-blue-500 hover:text-blue-300" href="https://forms.gle/S1sQfY2kfcVjydsR6">here</a></li>
+        </ul>
       </p>
     </div>
   );
