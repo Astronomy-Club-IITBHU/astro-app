@@ -9,7 +9,7 @@ const Footer = () => {
           <AstroSVG color="white" />
         </a>
         <p className="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
-          © 2020 IITBHU
+          © 2021 IITBHU
         </p>
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
           {/* ----------------------   For facebook  -------------------- */}
