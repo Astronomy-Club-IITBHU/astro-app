@@ -5,17 +5,6 @@ import Img from "gatsby-image";
 const AchieveProject = () => {
   const achievements = [
     {
-      name: "Inter IIT Tech Meet",
-      events: [
-        {
-          eventName: "Star Cluster Identifying",
-          result: [
-            "Bronze (Sambhav Jain, Yash Agrawal, Abhishek & Govindswaroop Rahangdale)",
-          ],
-        },
-      ],
-    },
-    {
       name: "NSSC 2019, IIT KGP",
       events: [
         {
@@ -51,6 +40,19 @@ const AchieveProject = () => {
         },
       ],
     },
+    {
+      name: "Inter IIT Tech Meet, 2018",
+      events: [
+        {
+          eventName: "Star Cluster Identifying",
+          result: [
+            "Bronze (Sambhav Jain, Yash Agrawal, Abhishek & Govindswaroop Rahangdale)",
+          ],
+          link: "https://github.com/Astronomy-Club-IITBHU/star-cluster-identifier",
+          linkText: "GitHub Repo"
+        },
+      ],
+    }
   ];
 
   const projects = [
@@ -121,7 +123,7 @@ const AchieveProject = () => {
         );
       })}
 
-      <div className="text-2xl	text-center pb-2">Recent Achievements</div>
+      <div className="text-2xl text-center pb-2">Recent Achievements</div>
       <hr style={{ borderTop: "1px dotted lightgray" }}></hr>
       {achievements.map(data => {
         return (
@@ -130,7 +132,7 @@ const AchieveProject = () => {
             {data.events.map(event => {
               return (
                 <ul className="px-5 list-disc list-inside pb-3">
-                  <li className="text-lg text-gray-200">{event.eventName}</li>
+                  <li className="text-lg text-gray-200">{event.eventName} {event.link && <a class="transform duration-200 p-1 text-sm text-gray-300 bg-gray-800 hover:text-gray-100" href={event.link}>{event.linkText}</a>}</li>
                   <div>
                     {event.result.map(val => {
                       return <div className="pl-7 text-gray-300">{val}</div>;

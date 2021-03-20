@@ -9,7 +9,7 @@ const SEO = ({ post }) => {
         siteMetadata {
           title
           description
-          baseUrl
+          siteUrl
         }
       }
     }
@@ -17,19 +17,19 @@ const SEO = ({ post }) => {
 
   const defaults = data.site.siteMetadata;
 
-  if (defaults.baseUrl === "" && typeof window !== "undefined") {
-    defaults.baseUrl = window.location.origin;
+  if (defaults.siteUrl === "" && typeof window !== "undefined") {
+    defaults.siteUrl = window.location.origin;
   }
 
-  if (defaults.baseUrl === "") {
-    console.error("Please set a baseUrl in your site metadata!");
+  if (defaults.siteUrl === "") {
+    console.error("Please set a siteUrl in your site metadata!");
     return null;
   }
 
   const title = post.title || defaults.title;
   const description = post.description || defaults.description;
-  const url = new URL(post.path || "", defaults.baseUrl);
-  const image = post.image ? new URL(post.image, defaults.baseUrl) : false;
+  const url = new URL(post.path || "", defaults.siteUrl);
+  const image = post.image ? new URL(post.image, defaults.siteUrl) : false;
 
   return (
     <Helmet>

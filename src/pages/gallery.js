@@ -33,9 +33,9 @@ const Gallery = () => {
             orientations, workshops and Astrophotography.
           </p>
         </div>
-        <div className="flex flex-wrap -m-4">
+        <div className="flex flex-wrap justify-center -m-4">
           {data.images.nodes.map(image => (
-            <div className=" md:w-1/3 w-full sm:w-1  p-2">
+            <div className="sm:w-1/2 md:w-1/3 w-full p-2">
               <Img
                 alt={image.name}
                 class="absolute inset-0 w-full h-full object-cover object-center"

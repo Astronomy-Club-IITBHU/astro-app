@@ -3,12 +3,22 @@ const tailwindConfig = require("./tailwind.config.js");
 
 const fullConfig = resolveConfig(tailwindConfig);
 
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = "https://astroiitbhu.in",
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
+} = process.env;
+const isNetlifyProduction = NETLIFY_ENV === "production";
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
+
 module.exports = {
   siteMetadata: {
     title: "Astronomy Club IIT BHU",
     description:
       "The Astronomy Club IIT BHU, an ambitious team driven by amateur astronomers",
-    baseUrl: "https://astroiitbhu.in/",
+    base: "https://astroiitbhu.in/",
+    siteUrl: "https://astroiitbhu.in",
   },
 
   plugins: [
@@ -83,6 +93,27 @@ module.exports = {
         disable: !process.env.ANALYZE_BUNDLE_SIZE,
         generateStatsFile: true,
         analyzerMode: "static",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: "*" }],
+          },
+          "branch-deploy": {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+            sitemap: null,
+            host: null,
+          },
+          "deploy-preview": {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+            sitemap: null,
+            host: null,
+          },
+        },
       },
     },
   ],

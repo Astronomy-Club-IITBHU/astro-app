@@ -18,7 +18,7 @@ const BlogLayout = ({ post }) => {
         </div>
 
         <div className="w-full py-4 px-6 text-white flex flex-col justify-between">
-          <h3 className="font-semibold text-3xl	 leading-tight truncate">
+          <h3 className="font-semibold text-3xl md:text-xl leading-tight truncate">
             {post.title}
           </h3>
           <p className="mt-1">{post.excerpt}</p>
