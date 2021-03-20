@@ -29,21 +29,48 @@ const UpcomingEvents = () => {
       <h1 className="text-2xl	text-center pb-5">Upcoming Events</h1>
       <Img fluid={image} />
       <p className="py-2 leading-relaxed text-base">
-        {" "}
-        Greetings from Astronomy Club ! The coronavirus may have halted your
-        lives but do not let it halt your passion for astronomy. We bring you
-        an opportunity to show off your knowledge and enchant with your words. 
-        The Astronomy Club presents CORONA ARTICLE WRITING CONTEST (CAWC).
-        Write an article on any topic related to astronomy, and the best two
-        articles will be published in the upcoming edition of The Corona Magazine.
-        <h1 class="text-xl">Rules</h1>
-        <ul class="list-disc list-inside">
-          <li>Only one article allowed per person</li>
-          <li>Word limit: 700-1000 words</li>
-          <li>Languages: English & Hindi</li>
-          <li>Submission deadline: 25th January, 2021</li>
-          <li>Submit as a word document <a class="text-blue-500 hover:text-blue-300" href="https://forms.gle/S1sQfY2kfcVjydsR6">here</a></li>
+        <ul className="list-inside list-disc">
+          <li className="bold">Supernova :-</li>
+          <p>
+            Supernova? It's a dead star. And yet, it is the most beautiful
+            specimen in the universe. Such a beautiful Supernova transpires in
+            Technex. Supernova is the cadence connecting all the Astronomical
+            events of the Annual Technical Festival of IIT (BHU).
+          </p>
+          <li className="bold">Astro-Quiz :-</li>
+          <p>
+            AstroQuiz, clearing its significance with the word itself; Astronomy
+            Quiz. The most comfortable yet the most challenging event of
+            "Supernova." All the questions asked will be based on Astronomy,
+            Astrophysics, Mythology, and much more general stuff related to
+            Cosmos.
+          </p>
+          <li className="bold">Scientists of Utopia(SOU) :-</li>
+          <p>
+            SOU ( Scientists of Utopia) is the Case Study Solving event where
+            participants are required to provide solutions to the Case Study
+            provided. These Case Studies can be hypothetical, and hence it tests
+            the imagination skills and problem-solving ability using real-life
+            technology.
+          </p>
+          <li className="bold">Astrophotography :-</li>
+          <p>
+            Astrophotography, also known as astronomical imaging, is the
+            photography of astronomical objects, celestial events, and night sky
+            areas. Astrophotography brings out the divine beauty of both, the
+            things we see and the things we don't, to our eyes.
+          </p>
         </ul>
+        <p>
+          To register in the events visit{" "}
+          <a
+            href="https://technex.co.in/"
+            className="underline hover:text-green-400"
+          >
+            Technex'21
+          </a>{" "}
+          site
+        </p>
       </p>
     </div>
   );
