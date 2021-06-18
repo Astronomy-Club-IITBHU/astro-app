@@ -97,7 +97,7 @@ const AchieveProject = () => {
       className="lg:w-2/3 rounded-lg bg-gray-900 md-1/2 px-5 py-5 mx-5 md:mx-10 mb-5 bg-white font-mono "
       style={{ boxShadow: "0px 0px 80px black" }}
     >
-      <div className="text-2xl text-center pb-2 mt-5">Projects</div>
+      <div className="text-2xl text-center pb-5">Projects</div>
       <hr style={{ borderTop: "1px dotted lightgray" }}></hr>
       {projects.map((data, index) => {
         return (
@@ -132,7 +132,7 @@ const AchieveProject = () => {
             {data.events.map(event => {
               return (
                 <ul className="px-5 list-disc list-inside pb-3">
-                  <li className="text-lg text-gray-200">{event.eventName} {event.link && <a class="transform duration-200 p-1 text-sm text-gray-300 bg-gray-800 hover:text-gray-100" href={event.link}>{event.linkText}</a>}</li>
+                  <li className="text-lg text-gray-200">{event.eventName} {event.link && <a class="transform duration-200 p-1 text-sm text-gray-200 bg-gray-800 hover:text-gray-100" href={event.link}>{event.linkText}</a>}</li>
                   <div>
                     {event.result.map(val => {
                       return <div className="pl-7 text-gray-300">{val}</div>;
