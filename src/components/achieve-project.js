@@ -5,6 +5,35 @@ import Img from "gatsby-image";
 const AchieveProject = () => {
   const achievements = [
     {
+      name: "Astrochamp 2021, IIT BBSR",
+      events: [
+        {
+          eventName: "Case Study",
+          result: [
+            "1st (Preety, Harsh, Atharv, Preksha, Adrija, Manish, Pratyush, Utkarsh, Jashandeep & Varun)"
+          ],
+        },
+        {
+          eventName: "Graphic Designing",
+          result: [
+            "2nd (Prince)"
+          ],
+        }
+      ],
+    },
+    {
+      // TODO
+      name: "IAAC 2021",
+      events: [
+        {
+          eventName: "Final Round",
+          result: [
+            "Gold Honour & Top 1% of all participants (Pratyush)"
+          ],
+        }
+      ],
+    },
+    {
       name: "NSSC 2019, IIT KGP",
       events: [
         {
@@ -41,7 +70,7 @@ const AchieveProject = () => {
       ],
     },
     {
-      name: "Inter IIT Tech Meet, 2018",
+      name: "Inter IIT Tech Meet 2018",
       events: [
         {
           eventName: "Star Cluster Identifying",
