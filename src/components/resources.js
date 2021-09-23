@@ -44,11 +44,11 @@ const playlist = [
     link: "https://youtu.be/sViAwfeMjV0",
   },
   {
-    name: "Astronomy / Astrophysics (Proffesor Dave)",
+    name: "Astronomy / Astrophysics (Professor Dave)",
     link: "https://youtu.be/i8U9ZjRXClI",
   },
   {
-    name: "The Theoretical Minimum (Proffesor Leonard Susskind)",
+    name: "The Theoretical Minimum (Professor Leonard Susskind)",
     link: "http://theoreticalminimum.com/courses",
   },
 ];
