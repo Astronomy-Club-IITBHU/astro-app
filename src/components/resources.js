@@ -7,7 +7,7 @@ const books = [
       "https://drive.google.com/file/d/0BxKy_-H3AlSkUkQ0c2ZpUmhhbk0/view?usp=drivesdk",
   },
   {
-    name: "Introduction to astronomy",
+    name: "Introduction to Astronomy",
     path:
       "https://drive.google.com/file/d/0BxKy_-H3AlSkUm1fR1JRQVhKWVk/view?usp=drivesdk",
   },
@@ -44,13 +44,17 @@ const playlist = [
     link: "https://youtu.be/sViAwfeMjV0",
   },
   {
-    name: "Astronomy/Astrophysics (Proffesor Dave)",
+    name: "Astronomy / Astrophysics (Professor Dave)",
     link: "https://youtu.be/i8U9ZjRXClI",
+  },
+  {
+    name: "The Theoretical Minimum (Professor Leonard Susskind)",
+    link: "http://theoreticalminimum.com/courses",
   },
 ];
 const Magazines = [
   {
-    name: "Corona(latest)",
+    name: "Corona (latest)",
     path:
       "https://drive.google.com/file/d/19uPWFiL4JiW83NmDBeQe57-z15I3YQgf/view?usp=drivesdk",
   },
@@ -78,13 +82,13 @@ const Resources = () => {
           <div class="text-gray-200 text-4xl ">Videos</div>
         </div>
         <div className="bg-gray-300 rounded-md overflow-hidden mx-8">
-          {playlist.map(vedio => (
+          {playlist.map(video => (
             <div className="text-center text-black py-2 border-b-2 border-gray-800 hover:text-white hover:bg-gray-800">
               <a
-                href={vedio.link}
+                href={video.link}
                 className="text-lg font-bold inline-block w-full hover:text-2xl"
               >
-                {vedio.name}
+                {video.name}
               </a>
             </div>
           ))}
