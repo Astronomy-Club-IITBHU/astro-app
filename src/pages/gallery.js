@@ -28,9 +28,9 @@ const Gallery = () => {
             Our camera roll
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            This gallery contains some of the pictures from our victories at
+            This gallery contains pictures from our victories at
             Inter-IIT and different colleges, Alumni's meet, partying,
-            orientations, workshops and Astrophotography.
+            orientations, workshops, and Astrophotography.
           </p>
         </div>
         <div className="flex flex-wrap justify-center -m-4">
