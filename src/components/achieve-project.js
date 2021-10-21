@@ -5,7 +5,7 @@ import Img from "gatsby-image";
 const AchieveProject = () => {
   const achievements = [
     {
-      name: " Anvesha 2021, IISER TVM",
+      name: "Anvesha 2021, IISER TVM",
       events: [
         {
           eventName: "BAHFest",
