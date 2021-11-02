@@ -25,7 +25,7 @@ const UpcomingEvents = () => {
         top: "0",
       }}
     >
-      <h1 className="text-2xl	text-center pb-5">Upcoming Events</h1>
+      <h1 className="text-2xl	text-center pb-5">Recent Events</h1>
       <hr style={{ borderTop: "1px dotted lightgray" }}></hr>
       <p className="my-3">
         There aren't any upcoming events. Till then, checkout our {" "}
