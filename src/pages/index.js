@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/layout";
 import BackgroundImage from "gatsby-background-image";
 import { graphql, useStaticQuery } from "gatsby";
-import UpcomingEvents from "../components/upcoming-events";
+import RecentEvents from "../components/recent-events";
 import AchieveProject from "../components/achieve-project";
 
 const HomeText = () => {
@@ -69,7 +69,7 @@ const DownDivs = () => {
   return (
     <div className="flex flex-wrap mb-10 text-white">
       <AchieveProject />
-      <UpcomingEvents />
+      <RecentEvents />
     </div>
   );
 };
