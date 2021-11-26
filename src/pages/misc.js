@@ -15,8 +15,7 @@ const Members = () => {
   return (
     <Layout>
       <div
-        className="my-10 mx-auto w-full font-body md:w-7/12 text-white "
-        // style={{ boxShadow: "0px 0px 80px black" }}
+        className="my-10 mx-auto w-full font-body md:w-7/12 text-white"
       >
         <Accordion allowZeroExpanded>
           {/* Equipment */}

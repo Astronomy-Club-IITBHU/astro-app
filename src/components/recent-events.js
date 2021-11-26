@@ -20,7 +20,7 @@ const UpcomingEvents = () => {
 
   return (
     <div
-      className=" lg:w-1/4 rounded-lg bg-gray-900 md:w-1/2 px-5 py-5 bg-white overflow-hidden mb-5 font-mono"
+      className="flex-grow lg:w-1/4 rounded-lg bg-gray-900 md:w-1/2 px-5 py-5 bg-white overflow-hidden mb-5 font-mono"
       style={{
         height: "1%",
         position: "-webkit-sticky",
