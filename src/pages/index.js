@@ -67,7 +67,7 @@ const Front = () => {
 
 const DownDivs = () => {
   return (
-    <div className="flex flex-wrap mb-10 text-white">
+    <div className="flex flex-wrap justify-center mb-10 text-white">
       <AchieveProject />
       <RecentEvents />
     </div>

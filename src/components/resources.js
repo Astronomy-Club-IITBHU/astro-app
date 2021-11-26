@@ -68,9 +68,10 @@ const Resources = () => {
         </div>
         <div className="bg-gray-300 rounded-md overflow-hidden mx-8">
           {books.map(book => (
-            <div className="text-center text-black py-2 border-b-2 border-gray-800 hover:text-white hover:bg-gray-800">
+            <div className="text-center text-black py-2 border-b-2 border-gray-800 transition duration-250 hover:text-white hover:bg-gray-800">
               <a
-                href={book.path}
+                // href={book.path}
+                href="#"
                 className="text-lg font-bold inline-block w-full hover:text-2xl"
               >
                 {book.name}
@@ -83,7 +84,7 @@ const Resources = () => {
         </div>
         <div className="bg-gray-300 rounded-md overflow-hidden mx-8">
           {playlist.map(video => (
-            <div className="text-center text-black py-2 border-b-2 border-gray-800 hover:text-white hover:bg-gray-800">
+            <div className="text-center text-black py-2 border-b-2 border-gray-800 transition duration-250 hover:text-white hover:bg-gray-800">
               <a
                 href={video.link}
                 className="text-lg font-bold inline-block w-full hover:text-2xl"
@@ -98,7 +99,7 @@ const Resources = () => {
         </div>
         <div className="bg-gray-300 rounded-md overflow-hidden mx-8">
           {Magazines.map(magazine => (
-            <div className="text-center text-black py-2 border-b-2 border-gray-800 hover:text-white hover:bg-gray-800">
+            <div className="text-center text-black py-2 border-b-2 border-gray-800 transition duration-250 hover:text-white hover:bg-gray-800">
               <a
                 href={magazine.path}
                 className="text-lg font-bold inline-block w-full visited:text-brown"
