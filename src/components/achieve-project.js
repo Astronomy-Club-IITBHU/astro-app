@@ -5,6 +5,17 @@ import Img from "gatsby-image";
 const AchieveProject = () => {
   const achievements = [
     {
+      name: "AstraX'20, IIT Mandi",
+      events: [
+        {
+          eventName: "Shooting Star - The online Astrophotography event",
+          result: [
+            "1st (Amit Kumar Baheti)"
+          ],
+        },
+      ],
+    },
+    {
       name: "Anvesha 2021, IISER TVM",
       events: [
         {
