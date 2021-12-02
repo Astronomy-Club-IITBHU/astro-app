@@ -3,36 +3,50 @@ import React from "react";
 const books = [
   {
     name: "Cosmology",
+    topic: "",
+    author: "Steven Wienberg",
     path:
       "https://drive.google.com/file/d/0BxKy_-H3AlSkUkQ0c2ZpUmhhbk0/view?usp=drivesdk",
   },
   {
-    name: "Introduction to Astronomy",
+    name: "Introduction to Modern Astronomy",
+    topic: "Modern Physics",
+    author: "Bradley W.Carroll",
     path:
       "https://drive.google.com/file/d/0BxKy_-H3AlSkUm1fR1JRQVhKWVk/view?usp=drivesdk",
   },
   {
-    name: "Radio Astronomy",
+    name: "Interferometry and synthesis in radio astronomy",
+    topic: "Radio Astronomy",
+    author: "A. Richard Thompson",
     path:
       "https://drive.google.com/file/d/1OrC5WLk3jh67BrxOY9j-NF9Zb_SklW39/view?usp=drivesdk",
   },
   {
     name: "Hyperspace",
+    topic: "Parallel Universe",
+    author: "Michio Kaku",
     path:
       "https://drive.google.com/file/d/0BxKy_-H3AlSkc3I2Y3lhbXZLWHc/view?usp=drivesdk",
   },
   {
     name: "Quantum Mechanics",
+    topic: "Quantum Physics",
+    auhtor: "David J. Griffiths",
     path:
       "https://drive.google.com/file/d/0ByngxFTGX5xgT3JRY1ltWHA0cVk/view?usp=drivesdk",
   },
   {
-    name: "General Relativity",
+    name: "A first course in General Relativity",
+    topic: "Relativity",
+    author: "Bernard Schutz",
     path:
       "https://drive.google.com/file/d/0BxKy_-H3AlSkWXlZMU0yeEVBbVU/view?usp=drivesdk",
   },
   {
     name: "Physics of the impossible",
+    topic: "",
+    author: "Michio Kaku",
     path:
       "https://drive.google.com/file/d/0BxKy_-H3AlSkcVBQQ2h1cWtFN1E/view?usp=drivesdk",
   },
@@ -68,14 +82,14 @@ const Resources = () => {
         </div>
         <div className="bg-gray-300 rounded-md overflow-hidden mx-8">
           {books.map(book => (
-            <div className="text-center text-black py-2 border-b-2 border-gray-800 transition duration-250 hover:text-white hover:bg-gray-800">
-              <a
+            <div className="text-center text-black px-4 py-2 border-b-2 border-gray-800 transition duration-250 hover:text-white hover:bg-gray-800">
+              <div
                 // href={book.path}
                 href="#"
                 className="text-lg font-bold inline-block w-full hover:text-2xl"
               >
-                {book.name}
-              </a>
+                {book.topic} {book.topic === "" ? "" : ":"} {book.name}
+              </div>
             </div>
           ))}
         </div>
