@@ -68,9 +68,9 @@ const playlist = [
 ];
 const Magazines = [
   {
-    name: "Corona (latest)",
+    name: "The Redshift",
     path:
-      "https://drive.google.com/file/d/19uPWFiL4JiW83NmDBeQe57-z15I3YQgf/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1bM9bWw-Zgvayb1SkR_sHboIg3tWX6MlF/view?usp=sharing",
   },
 ];
 const Resources = () => {
