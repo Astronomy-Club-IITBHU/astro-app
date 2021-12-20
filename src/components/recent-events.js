@@ -5,7 +5,7 @@ import Img from "gatsby-image";
 const UpcomingEvents = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "astropedia.jpg" }) {
+      file(relativePath: { eq: "Corona_to_The_Redshift.jpeg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_withWebp
@@ -31,9 +31,9 @@ const UpcomingEvents = () => {
       <h1 className="text-2xl	text-center pb-5">Recent Events</h1>
       <hr style={{ borderTop: "1px dotted lightgray" }}></hr>
       <p className="my-3 flex flex-col">
-        <p className="mb-3 text-center text-xl">ASTROPEDIA</p>
+        <p className="mb-3 text-center text-xl">Our magazine changed its name!</p>
         <Img
-          alt={"Astropedia Schedule"}
+          alt={"Corona to The Redshift"}
           class="absolute inset-0 w-full h-full object-cover object-center"
           fluid={
             image
@@ -41,7 +41,7 @@ const UpcomingEvents = () => {
           style={{ height: "100%", width: "100%" }}
         />
         <button class="mt-5 bg-indigo-600 bg-opacity-50 transition duration-300 hover:bg-blue-500 text-white-700 font-semibold hover:text-white py-2 px-4 hover:border-transparent rounded">
-          <a href="http://bit.ly/Astropedia">Register Now!</a>
+          <a href="http://bit.ly/3ysEee7">Find out why</a>
         </button>
       </p>
     </div>

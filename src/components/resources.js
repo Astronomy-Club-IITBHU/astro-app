@@ -70,7 +70,7 @@ const Magazines = [
   {
     name: "The Redshift",
     path:
-      "https://drive.google.com/file/d/1bM9bWw-Zgvayb1SkR_sHboIg3tWX6MlF/view?usp=sharing",
+      "https://drive.google.com/file/d/1PGTLjWPcIdrcSLMZHuaH4Lh6Sk_5RDkv/view?usp=sharing",
   },
 ];
 const Resources = () => {
