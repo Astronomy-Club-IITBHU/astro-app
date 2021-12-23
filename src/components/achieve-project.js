@@ -44,7 +44,6 @@ const AchieveProject = () => {
       ],
     },
     {
-      // TODO
       name: "IAAC 2021",
       events: [
         {
@@ -56,7 +55,7 @@ const AchieveProject = () => {
       ],
     },
     {
-     name: "AstraX'20, IIT Mandi",
+     name: "AstraX 2020, IIT Mandi",
      events: [
        {
          eventName: "Shooting Star - The online Astrophotography event",
@@ -102,19 +101,19 @@ const AchieveProject = () => {
         },
       ],
     },
-    {
-      name: "Inter IIT Tech Meet 2018",
-      events: [
-        {
-          eventName: "Star Cluster Identifying",
-          result: [
-            "Bronze (Sambhav Jain, Yash Agrawal, Abhishek & Govindswaroop Rahangdale)",
-          ],
-          link: "https://github.com/Astronomy-Club-IITBHU/star-cluster-identifier",
-          linkText: "GitHub Repo"
-        },
-      ],
-    }
+    // {
+    //   name: "Inter IIT Tech Meet 2018",
+    //   events: [
+    //     {
+    //       eventName: "Star Cluster Identifying",
+    //       result: [
+    //         "Bronze (Sambhav Jain, Yash Agrawal, Abhishek & Govindswaroop Rahangdale)",
+    //       ],
+    //       link: "https://github.com/Astronomy-Club-IITBHU/star-cluster-identifier",
+    //       linkText: "GitHub Repo"
+    //     },
+    //   ],
+    // }
   ];
 
   const projects = [
