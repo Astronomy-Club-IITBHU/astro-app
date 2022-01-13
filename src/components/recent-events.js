@@ -38,9 +38,9 @@ const UpcomingEvents = () => {
             style={{ height: "100%", width: "100%" }}
           />
         ))}
-        <button class="mt-5 bg-indigo-600 bg-opacity-50 transition duration-300 hover:bg-blue-500 text-white-700 font-semibold hover:text-white py-2 px-4 hover:border-transparent rounded">
-          <a href="https://forms.gle/37aAR4bW34BxLYTF9">Order Now</a>
-        </button>
+        <a href="https://forms.gle/37aAR4bW34BxLYTF9" className="text-center mt-5 bg-indigo-600 bg-opacity-50 transition duration-300 hover:bg-blue-500 text-white-700 font-semibold hover:text-white py-2 px-4 hover:border-transparent rounded">
+          Order Now
+        </a>
       </p>
     </div>
   );
