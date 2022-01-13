@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/Anksus/astro-app#readme",
   "dependencies": {
+    "caniuse-lite": "^1.0.30001299",
     "gatsby": "^2.25.3",
     "gatsby-background-image": "^1.3.1",
     "gatsby-image": "^2.7.0",
