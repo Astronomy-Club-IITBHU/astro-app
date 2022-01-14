@@ -71,7 +71,7 @@ const AchieveProject = () => {
         {
           eventName: "Case Study",
           result: [
-            "1st (Yash Vinod & Vaibhav Singh)",
+            "2nd (Yash Vinod & Vaibhav Singh)",
             "3rd (Vamsi Bodaballa & Aditya Keshari)",
           ],
         },
