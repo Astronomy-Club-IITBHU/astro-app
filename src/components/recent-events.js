@@ -35,14 +35,14 @@ const UpcomingEvents = () => {
       <h1 className="text-2xl	text-center pb-5">Recent Events</h1>
       <hr style={{ borderTop: "1px dotted lightgray" }}></hr>
       <p className="my-3 flex flex-col align-items-center">
-        <p className="mb-3 text-center text-xl">AstroPhotography Workshop</p>
+        <p className="mb-3 text-center text-xl">Yuri's Night</p>
         <AutoplaySlider
           play={true}
           bullets={false}
           cancelOnInteraction={false}
           interval={8000}
           style={{
-            "--slider-height-percentage": "100%",
+            "--slider-height-percentage": "150%",
             "--organic-arrow-height": "20px",
             "--loader-bar-color": "#869afe",
             "--slider-transition-duration": "800ms"
@@ -58,8 +58,8 @@ const UpcomingEvents = () => {
             <div data-src={image.childImageSharp.fluid.src} />
           ))}
         </AutoplaySlider>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc1bw_WUtrG2YE4OUyLFRL8yONT2LOWlxEUZxL8OZinuBOc7w/viewform?usp=pp_url" className="text-center mt-5 bg-indigo-600 bg-opacity-50 transition duration-300 hover:bg-blue-500 text-white-700 font-semibold hover:text-white py-2 px-4 hover:border-transparent rounded">
-          Register Now!
+        <a href="https://t.me/Yuris_night" className="text-center mt-5 bg-indigo-600 bg-opacity-50 transition duration-300 hover:bg-blue-500 text-white-700 font-semibold hover:text-white py-2 px-4 hover:border-transparent rounded">
+          Join Our Telegram group for updates
         </a>
       </p>
     </div>
