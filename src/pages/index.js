@@ -70,6 +70,7 @@ const DownDivs = () => {
     <div className="flex flex-wrap justify-center mb-10 text-white">
       <AchieveProject />
       <RecentEvents />
+      {/* HI */}
     </div>
   );
 };
