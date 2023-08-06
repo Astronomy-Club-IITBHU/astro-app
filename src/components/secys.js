@@ -3,6 +3,14 @@ import React from "react";
 const Secys = () => {
 	const members = [
 		{
+			year: "2023-24",
+			names: ["Manash Kumar", "Prayash Dash", "Yuvraj Singh"]
+		},
+		{
+			year: "2022-23",
+			names: ["Aditya Surana", "Pratyush Singh", "Suraj Patil"]
+		},
+		{
 			year: "2021-22",
 			names: ["Preety Sarwa", "Paranjay Garg", "Harsh Pandey"]
 		},
