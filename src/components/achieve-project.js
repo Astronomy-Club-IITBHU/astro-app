@@ -5,6 +5,34 @@ import Img from "gatsby-image";
 const AchieveProject = () => {
   const achievements = [
     {
+      name: "Tryst 2022, IIT Delhi",
+      events: [
+        {
+          eventName: "Footprints of Mars (Case Study)",
+          result: [
+            "1nd (Pratyush Singh, Manash Kumar & Prayash Dash)"
+          ],
+        },
+      ],
+    },
+    {
+      name: "NSSC 2022, IIT KGP",
+      events: [
+        {
+          eventName: "Case Study",
+          result: [
+            "1nd (Manash Kumar, Prayash Dash & Sushil)"
+          ],
+        },
+        {
+          eventName: "AstroMath",
+          result: [
+            "2nd (Sanskar Singh & Abhay)"
+          ],
+        }
+      ],
+    },
+    {
       name: "NSSC 2021, IIT KGP",
       events: [
         {
